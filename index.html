@@ -6,7 +6,9 @@
 </head>
 <body>
 <py-script>
-    print("hello")
+	from datetime import datetime
+	now = datetime.now()
+	display(now.strftime("%m/%d/%Y, %H:%M:%S"))
 </py-script>
 </body>
 </html>
