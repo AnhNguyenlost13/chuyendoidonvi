@@ -4,26 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Example</title>
 	<script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script language="javascript" type="text/javascript">
-    $(function() {
-        $("#Button1").click(function(e) {
-            var itemExists = false;
-            var txt = $("#Text1").val();
-            e.preventDefault();
-            $("#Select1 option").each(function() {
-                if ($(this).text() == $.trim(txt)) {
-                    itemExists = true;
-                    alert('Item already exists');
-                }
-            });
-
-          if (!itemExists) {
-          $("#Select1").append("<option value=\"1\">" + txt + "</option>");
-          $("#Text1").val('');
-          }
-        });
-    });           
-</script>   
 </head>
 <body>
 	<h1>Chuyen Doi Don Vi</h1>
@@ -44,5 +24,6 @@
   <option value="m">m</option>
   <option value="km">km</option>
 </select>
+	<br><button type=button name=Button1>Convert</button>
 </body>
 </html>
