@@ -6,4 +6,3 @@
 <h2>tại sao?</h2>
 
 <h2>cách sử dụng
-  chỉ cần điền số với chọn đơn vị thôi mà cũng đéo làm được thì bố khép đít lạy chúng mày
