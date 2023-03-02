@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Example</title>
+	<title>Chuyển đổi đơn vị</title>
 	<script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
@@ -19,12 +19,19 @@
 <br>
 <label for="to">Convert to:</label>
 
-<input type="number" value="99" readonly="readonly">
+<input type="number" value=" " readonly="readonly">
 <select name="to" id="to">
   <option value="cm">cm</option>
   <option value="dm">dm</option>
   <option value="m">m</option>
   <option value="km">km</option>
+	var usedNames = {};
+$("select > option").each(function () {
+  if(usedNames[this.text]) {
+     $(this).remove();
+ } else {
+     usedNames[this.text] = this.value;
+ }});
 </select>
 	<br><button type=button name=Button1>Convert</button>
 </body>
