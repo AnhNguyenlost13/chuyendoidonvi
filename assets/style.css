@@ -11,12 +11,8 @@ h1 {
 
 h2 {
   color: #2B7A78;
-  font-size: 40px;
-  text-align: center;
 }
 
 input[type="number"] {
   background-color: rgb(222, 242, 241);
-  font-size: 30px;
-    
 }
