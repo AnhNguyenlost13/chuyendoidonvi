@@ -4,7 +4,7 @@ body {
 
 h1 {
   color: white;
-  font-family: "Segoe UI Variable Display", "San Francisco";
+  font-family: "Segoe UI Variable Display", "San Francisco", "Fira Sans Semibold";
   font-size: 40px;
   text-align: center;
 }
