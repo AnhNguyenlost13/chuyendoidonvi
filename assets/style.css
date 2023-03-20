@@ -8,6 +8,10 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  color: #2B7A78
+}
+
 input[type="number"] {
   background-color: rgb(222, 242, 241)
 }
