@@ -310,19 +310,18 @@
     </p>
 
     <p>Result: <input id="lengthResult" readonly="readonly">
-<button class="btn" onclick="copyContent()">Copy!</button>
-
-<script>
-  let text = document.getElementById('myText').innerHTML;
-  const copyContent = async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      console.log('Content copied to clipboard');
-    } catch (err) {
-      console.error('Failed to copy: ', err);
-    }
-  }
-</script>
+    <button class="btn" onclick="copyContent()">Copy</button>
+    <script>
+      let text = document.getElementById('lengthResult').innerHTML;
+      const copyContent = async () => {
+        try {
+          await navigator.clipboard.writeText(text);
+          console.log('debug: Content copied to clipboard');
+        } catch (err) {
+          console.error('debug: Failed to copy: ', err);
+        }
+      }
+    </script>
     </p>
 </body>
 </html>
