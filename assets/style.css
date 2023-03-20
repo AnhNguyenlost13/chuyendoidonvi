@@ -3,7 +3,11 @@ body {
 }
 
 h1 {
-  color: black;
-  font-family: "Segoe UI Variable Display", "San Francisco"
-  text-align: left;
+  color: white;
+  font-family: "Segoe UI Variable Display", "San Francisco";
+  text-align: center;
+}
+
+input[type="number"], textarea {
+  background-color: rgb(222, 242, 241)
 }
