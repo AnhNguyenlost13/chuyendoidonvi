@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"
+    <meta charset="UTF-8">
     <title>Unit Converter</title>
     <script>
         function convertLength() {
@@ -275,7 +275,7 @@
     <h1>Unit Converter</h1>
 
     <h2>Length</h2>
-    <p>Value: <input type="text" id="lengthValue" onchange="convertLength()"></p>
+    <p>Value: <input type="number" id="lengthValue" onchange="convertLength()"></p>
     <p>From:
         <select id="lengthFrom" onchange="convertLength()">
             <option value="km">Kilometers</option>
@@ -309,6 +309,6 @@
         </select>
     </p>
 
-    <p>Result: <input type="text" id="lengthResult"></p>
+    <p>Result: <input type="number" id="lengthResult" readonly="readonly"></p>
 </body>
 </html>
