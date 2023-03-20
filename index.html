@@ -1,32 +1,314 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Chuyển đổi đơn vị</title>
-	<script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-	<link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8"
+    <title>Unit Converter</title>
+    <script>
+        function convertLength() {
+            var from = document.getElementById('lengthFrom').value;
+            var to = document.getElementById('lengthTo').value;
+            var value = document.getElementById('lengthValue').value;
+
+            if (from == 'km') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value * 0.621371;
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value * 1000;
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value * 3280.84;
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value * 100;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value * 10;
+                } else if (to == 'dm') {
+                    document.getElementById('lengthResult').value = value * 1000;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value * 10000;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value * 100000;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value * 39370.1;
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value * 1093.61;
+                } else if (to == 'km') { // why the hell
+                    document.getElementById('lengthResult').value = value; // if you've ever felt useless remember this line of code
+                }
+            } else if (from == 'mi') {
+                if (to == 'mi') { // why the hell!??
+                    document.getElementById('lengthResult').value = value;  // if you've ever felt useless remember this line of code
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value * 1609.34;
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value * 5280;
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value * 160.934;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value * 16.0934;
+                } else if (to == 'dm') {
+                    document.getElementById('lengthResult').value = value * 16093.4;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value * 160934;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value * 1609340;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value * 63360;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value * 1.60934;
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value * 1760;
+                }
+            } else if (from == 'm') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value / 1609.34;
+                } else if (to == 'm') { // why the hell man!?!?? why?????grfdfd
+                    document.getElementById('lengthResult').value = value; // this line has helped humanity more than people in reaction videos
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value * 3.28084;
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value / 10;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value / 100;
+                } else if (to == 'dm') {
+                    document.getElementById('lengthResult').value = value * 10;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value * 100;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value * 1000;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value * 39.3701;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value / 1000
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value * 1.09361;
+                }
+            } else if (from == 'ft') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value / 5280;
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value ;
+                } else if (to == 'ft') { // i hate those who converts one unit to the same one
+                    document.getElementById('lengthResult').value = value; // 
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value / 10;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value / 100;
+                } else if (to == 'dm') {
+                    document.getElementById('lengthResult').value = value * 10;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value * 100;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value * 1000;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value * 39.3701;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value / 1000;
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value / 3;
+                }
+            } else if (from == 'dam') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value / 160.934;
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value * 10;
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value * 32.8084;
+                } else if (to == 'dam') { // average helpfulness of Pham Minh Tri:
+                    document.getElementById('lengthResult').value = value;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value / 10;
+                } else if (to == 'dm') {
+                    document.getElementById('lengthResult').value = value * 100;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value * 1000;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value * 10000;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value * 393.701;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value / 100
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value * 10.9361; }
+            } else if (from == 'hm') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value / 16.0934;
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value * 100;
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value * 328.084;
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value * 10;
+                } else if (to == 'hm') { // i love niggas
+                    document.getElementById('lengthResult').value = value;
+                } else if (to == 'dm') {
+                    document.getElementById('lengthResult').value = value * 1000;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value * 10000;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value * 100000;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value * 3937.01;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value / 10
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value * 109.361; }
+            } else if (from == 'dm') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value / 16093.4;
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value / 10;
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value * 0.328084;
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value / 100;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value / 1000;
+                } else if (to == 'dm') { 
+                    document.getElementById('lengthResult').value = value; // fucking idiots click on this shit, especially PMT
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value * 10;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value * 100;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value * 3.93701;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value / 10000
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value / 9.144; }
+            } else if (from == 'cm') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value / 1609.34;
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value / 100;
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value * 0.0328084;
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value / 100;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value / 1000;
+                } else if (to == 'dm') { 
+                    document.getElementById('lengthResult').value = value / 10;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value * 10;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value / 2.54;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value / 100000
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value / 91.44; }
+            } else if (from == 'mm') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value / 1609344;
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value / 1000;
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value / 304.8;
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value / 10000;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value / 100000;
+                } else if (to == 'dm') { 
+                    document.getElementById('lengthResult').value = value / 100;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value / 10;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value / 25.4;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value / 1000000
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value / 914.4; }
+            } else if (from == 'in') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value / 63360;
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value / 39.37;
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value / 12;
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value / 393.7;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value / 3937;
+                } else if (to == 'dm') { 
+                    document.getElementById('lengthResult').value = value / 3.937;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value / 0.0937;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value / 0.00937;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value / 39370
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value / 36; }
+            } else if (from == 'yd') {
+                if (to == 'mi') {
+                    document.getElementById('lengthResult').value = value / 1760;
+                } else if (to == 'm') {
+                    document.getElementById('lengthResult').value = value / 1.094;
+                } else if (to == 'ft') {
+                    document.getElementById('lengthResult').value = value / 3;
+                } else if (to == 'dam') {
+                    document.getElementById('lengthResult').value = value / 10.936;
+                } else if (to == 'hm') {
+                    document.getElementById('lengthResult').value = value / 109.4;
+                } else if (to == 'dm') { 
+                    document.getElementById('lengthResult').value = value / 9.144;
+                } else if (to == 'cm') {
+                    document.getElementById('lengthResult').value = value / 91.44;
+                } else if (to == 'mm') {
+                    document.getElementById('lengthResult').value = value / 914.4;
+                } else if (to == 'in') {
+                    document.getElementById('lengthResult').value = value * 36;
+                } else if (to == 'km') {
+                    document.getElementById('lengthResult').value = value / 1094
+                } else if (to == 'yd') {
+                    document.getElementById('lengthResult').value = value; } // trí đã giúp tôi line này, rất hân hoan
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-	<h1><p style="font-family: Segoe UI Variable Display">CHUYỂN ĐỔI ĐƠN VỊ</p></h1>
-<label for="from">Convert from:</label>
+    <h1>Unit Converter</h1>
 
-<input type="number">
-<select name="from" id="from">
-  <option value="cm">cm</option>
-  <option value="dm">dm</option>
-  <option value="m">m</option>
-  <option value="km">km</option>
-</select>
-<br>
-<label for="to">Convert to:</label>
+    <h2>Length</h2>
+    <p>Value: <input type="text" id="lengthValue" onchange="convertLength()"></p>
+    <p>From:
+        <select id="lengthFrom" onchange="convertLength()">
+            <option value="km">Kilometers</option>
+            <option value="mi">Miles</option>
+            <option value="hm">Hectometers</option>
+            <option value="dam">Decameters></option>
+            <option value="m">Meters</option>
+            <option value="yd">Yards</option>
+            <option value="ft">Feet</option>
+            <option value="dm">Decimeters</option>
+            <option value="cm">Centimeters</option>
+            <option value="in">Inches</option>
+            <option value="mm">Millimeters</option>
+        </select>
+    </p>
 
-<input type="number" value=" " readonly="readonly">
-<select name="to" id="to">
-  <option value="cm">cm</option>
-  <option value="dm">dm</option>
-  <option value="m">m</option>
-  <option value="km">km</option>
-</select>
-	<br><button type=button name=Button1>Convert</button>
+    <p>To:
+        <select id="lengthTo" onchange="convertLength()">
+            <option value="km">Kilometers</option>
+            <option value="mi">Miles</option>
+            <option value="hm">Hectometers</option>
+            <option value="dam">Decameters></option>
+            <option value="m">Meters</option>
+            <option value="yd">Yards</option>
+            <option value="ft">Feet</option>
+            <option value="dm">Decimeters</option>
+            <option value="cm">Centimeters</option>
+            <option value="in">Inches</option>
+            <option value="mm">Millimeters</option>
+            
+        </select>
+    </p>
+
+    <p>Result: <input type="text" id="lengthResult"></p>
 </body>
 </html>
