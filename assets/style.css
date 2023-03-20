@@ -8,6 +8,6 @@ h1 {
   text-align: center;
 }
 
-input[type="number"], textarea {
+input[type="number"] {
   background-color: rgb(222, 242, 241)
 }
