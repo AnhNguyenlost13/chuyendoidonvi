@@ -315,7 +315,7 @@
       let result = document.getElementById('lengthResult').value;
       const copyResult = async () => {
         try {
-          await navigator.clipboard.writeText(text);
+          await navigator.clipboard.writeText(result);
           console.log('debug: Result copied to clipboard');
         } catch (err) {
           console.error('debug: Failed to copy: ', err);
