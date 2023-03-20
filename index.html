@@ -310,7 +310,7 @@
     </p>
 
     <p>Result: <input id="lengthResult" readonly="readonly">
-    <button class="btn_copy" onclick="copyResult()">Copy</button>
+    <button id="btn_copy" class="btn_copy" onclick="copyResult()">Copy</button>
     <script>
       let result = 0; // empty string
       const copyResult = async () => {
@@ -320,8 +320,8 @@
           console.log('debug: Result copied to clipboard');
         } catch (err) {
           console.error('debug: Failed to copy: ', err);
-          document.getElementByClassName("btn_copy").innerHTML="Copied!";
-          setTimeout(() => {  document.getElementByClassName("btn_copy").innerHTML="Copy"; }, 750);
+          document.getElementById("btn_copy").innerHTML="Copied!";
+          setTimeout(() => {  document.getElementById("btn_copy").innerHTML="Copy"; }, 750);
         }
       }
     </script>
