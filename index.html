@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Chuyển đổi đơn vị</title>
 	<script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 	<h1><p style="font-family: Segoe UI Variable Display">CHUYỂN ĐỔI ĐƠN VỊ</p></h1>
@@ -25,13 +26,6 @@
   <option value="dm">dm</option>
   <option value="m">m</option>
   <option value="km">km</option>
-	var usedNames = {};
-$("select > option").each(function () {
-  if(usedNames[this.text]) {
-     $(this).remove();
- } else {
-     usedNames[this.text] = this.value;
- }});
 </select>
 	<br><button type=button name=Button1>Convert</button>
 </body>
