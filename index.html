@@ -320,8 +320,8 @@
           console.log('debug: Result copied to clipboard');
         } catch (err) {
           console.error('debug: Failed to copy: ', err);
-          document.getElementById("btn_copy").value="Copied!";
-          setTimeout(() => {  document.getElementById("btn_copy").value="Copy"; }, 750);
+          document.getElementById("btn_copy").innerHTML="Copied!";
+          setTimeout(() => {  document.getElementById("btn_copy").innerHTML="Copy"; }, 750);
         }
       }
     </script>
