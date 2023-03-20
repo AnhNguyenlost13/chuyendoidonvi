@@ -5,11 +5,13 @@ body {
 h1 {
   color: white;
   font-family: "Segoe UI Variable Display", "San Francisco";
+  font-size: 40px;
   text-align: center;
 }
 
 h2 {
   color: #2B7A78
+  font-size: 40px;
 }
 
 input[type="number"] {
