@@ -318,10 +318,10 @@
           result = document.getElementById('lengthResult').value;
           await navigator.clipboard.writeText(result);
           console.log('debug: Result copied to clipboard');
+          document.getElementById("btn_copy").innerHTML = "Copied!";
+          setTimeout(() => {  document.getElementById("btn_copy").innerHTML = "Copy" ; }, 750);            
         } catch (err) {
           console.error('debug: Failed to copy: ', err);
-          document.getElementById("btn_copy").innerHTML = "Copied!";
-          setTimeout(() => {  document.getElementById("btn_copy").innerHTML = "Copy" ; }, 750);
         }
       }
     </script>
