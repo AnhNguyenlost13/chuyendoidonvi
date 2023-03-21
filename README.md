@@ -11,7 +11,7 @@
 - [x] Độ dài
 - [ ] Diện tích
 - [ ] Thể tích
-- [ ] Cân nặng của mẹ mày (đơn vị: tấn)
+- [ ] Cân nặng
 - [ ] Dữ liệu
 - [ ] Điện
 - [ ] Thời gian
