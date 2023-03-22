@@ -15,3 +15,9 @@
 - [ ] Thời gian
 - [ ] Nhiệt độ
 - [ ] Vận tốc
+- [ ] Năng lượng
+
+## các chức năng khác
+- [ ] tính cạnh huyền/cạnh góc vuông của một tam giác vuông
+- [ ] tính quãng đường tới tim em
+- [ ] tính sin cos tan cot
