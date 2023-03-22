@@ -9,8 +9,6 @@
 
 ## các đơn vị chuyển đổi được
 - [x] Độ dài
-- [ ] Diện tích
-- [ ] Thể tích
 - [ ] Cân nặng
 - [ ] Dữ liệu
 - [ ] Điện
