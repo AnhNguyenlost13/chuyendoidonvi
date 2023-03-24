@@ -32,7 +32,9 @@
                     document.getElementById('dataResult').value = value / 1000000000000000;
                 } else if (dataTo == 'PiB') {
                     document.getElementById('dataResult').value = value / 1125899906842624;
-                }
+                } else if (dataTo == 'EB') {
+                    document.getElementById('dataResult').value = value / 10000000000000000004
+                } // My phone gave up :(
                     
         function convertLength() {
             var lengthFrom = document.getElementById('lengthFrom').value;
