@@ -352,13 +352,13 @@
     </p>
 
     <p>Result: <input id="lengthResult" readonly="readonly">
-    <button id="btn_copy" class="btn_copy_length" onclick="copyResult()">📋 Copy</button>
+    <button id="btn_copy_length" class="btn_copy_length" onclick="copyLengthResult()">📋 Copy</button>
     <script>
-      let result = 0; // empty string
+      let length_result = 0; // empty string
       const copyResult = async () => {
         try {
           result = document.getElementById('lengthResult').value;
-          await navigator.clipboard.writeText(result);
+          await navigator.clipboard.writeText(length_result);
           console.log('[debug] [length] Result copied to clipboard');
           document.getElementById("btn_copy_length").innerHTML = "✅ Copied!";
           setTimeout(() => {  document.getElementById("btn_copy_length").innerHTML = "📋 Copy" ; }, 750); // đợi 0.75 giây trước khi về như cũ           
@@ -418,13 +418,13 @@
     </p>
 
     <p>Result: <input id="dataResult" readonly="readonly">
-    <button id="btn_copy_data" class="btn_copy_data" onclick="copyResult()">📋 Copy</button>
+    <button id="btn_copy_data" class="btn_copy_data" onclick="copyDataResult()">📋 Copy</button>
     <script>
       let data_result = 0; // empty string
-      const copyResult = async () => {
+      const copyDataResult = async () => {
         try {
           data_result = document.getElementById('dataResult').value;
-          await navigator.clipboard.writeText(result);
+          await navigator.clipboard.writeText(data_result);
           console.log('[debug] [data] Result copied to clipboard');
           document.getElementById("btn_copy_data").innerHTML = "✅ Copied!";
           setTimeout(() => {  document.getElementById("btn_copy_data").innerHTML = "📋 Copy" ; }, 750); // đợi 0.75 giây trước khi về như cũ           
