@@ -11,7 +11,29 @@
             
             if (dataFrom == 'B') {
                 if (dataTo == 'B') {
-                    document.getElementById('dataResult').value = value
+                    document.getElementById('dataResult').value = value; // yep teacher hoa has pneumonoultramicroscopicsilicovolcanoconiosis
+                } else if (dataTo == 'KB') {
+                    document.getElementById('dataResult').value = value / 1000;
+                } else if (dataTo == 'KiB') {
+                    document.getElementById('dataResult').value = value / 1024;
+                } else if (dataTo == 'MB') {
+                    document.getElementById('dataResult').value = value / 1000000;
+                } else if (dataTo == 'MiB') {
+                    document.getElementById('dataResult').value = value / 1048576;
+                } else if (dataTo == 'GB') {
+                    document.getElementById('dataResult').value = value / 1000000000;
+                } else if (dataTo == 'GiB') {
+                    document.getElementById('dataResult').value = value / 1073741824;
+                } else if (dataTo == 'TB') {
+                    document.getElementById('dataResult').value = value / 1000000000000;
+                } else if (dataTo == 'TiB') {
+                    document.getElementById('dataResult').value = value / 1099511627776;
+                } else if (dataTo == 'PB') {
+                    document.getElementById('dataResult').value = value / 1000000000000000;
+                } else if (dataTo == 'PiB') {
+                    document.getElementById('dataResult').value = value / 1125899906842624;
+                }
+                    
         function convertLength() {
             var lengthFrom = document.getElementById('lengthFrom').value;
             var lengthTo = document.getElementById('lengthTo').value;
