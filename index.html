@@ -11,30 +11,40 @@
             
             if (dataFrom == 'B') {
                 if (dataTo == 'B') {
-                    document.getElementById('dataResult').value = value; // yep teacher hoa has pneumonoultramicroscopicsilicovolcanoconiosis
+                    document.getElementById('dataResult').value = dataValue; // yep teacher hoa has pneumonoultramicroscopicsilicovolcanoconiosis
                 } else if (dataTo == 'KB') {
-                    document.getElementById('dataResult').value = value / 1000;
+                    document.getElementById('dataResult').value = dataValue / 1000;
                 } else if (dataTo == 'KiB') {
-                    document.getElementById('dataResult').value = value / 1024;
+                    document.getElementById('dataResult').value = dataValue / 1024;
                 } else if (dataTo == 'MB') {
-                    document.getElementById('dataResult').value = value / 1000000;
+                    document.getElementById('dataResult').value = dataValue / 1000000;
                 } else if (dataTo == 'MiB') {
-                    document.getElementById('dataResult').value = value / 1048576;
+                    document.getElementById('dataResult').value = dataValue / 1048576;
                 } else if (dataTo == 'GB') {
-                    document.getElementById('dataResult').value = value / 1000000000;
+                    document.getElementById('dataResult').value = dataValue / 1000000000;
                 } else if (dataTo == 'GiB') {
-                    document.getElementById('dataResult').value = value / 1073741824;
+                    document.getElementById('dataResult').value = dataValue / 1073741824;
                 } else if (dataTo == 'TB') {
-                    document.getElementById('dataResult').value = value / 1000000000000;
+                    document.getElementById('dataResult').value = dataValue / 1000000000000;
                 } else if (dataTo == 'TiB') {
-                    document.getElementById('dataResult').value = value / 1099511627776;
+                    document.getElementById('dataResult').value = dataValue / 1099511627776;
                 } else if (dataTo == 'PB') {
-                    document.getElementById('dataResult').value = value / 1000000000000000;
+                    document.getElementById('dataResult').value = dataValue / 1000000000000000;
                 } else if (dataTo == 'PiB') {
-                    document.getElementById('dataResult').value = value / 1125899906842624;
+                    document.getElementById('dataResult').value = dataValue / 1125899906842624;
                 } else if (dataTo == 'EB') {
-                    document.getElementById('dataResult').value = value / 10000000000000000004
-                } // My phone gave up :(
+                    document.getElementById('dataResult').value = dataValue / 1000000000000000000;
+                } else if (dataTo == 'EiB') {
+                    document.getElementById('dataResult').value = dataValue / 1152921504606846976;
+                } else if (dataTo == 'ZB') {
+                    document.getElementById('dataResult').value = dataValue / 1000000000000000000000;
+                } else if (dataTo == 'ZiB') {
+                    document.getElementById('dataResult').value = dataValue / 1180591620717411303424;
+                } else if (dataTo == 'YB') {
+                    document.getElementById('dataResult').value = dataValue / 1000000000000000000000000;
+                } else if (dataTo == 'YiB') {
+                    document.getElementById('dataResult').value = dataValue / 1208925819614629174706176;
+                } // lessgooooo
                     
         function convertLength() {
             var lengthFrom = document.getElementById('lengthFrom').value;
@@ -342,18 +352,18 @@
     </p>
 
     <p>Result: <input id="lengthResult" readonly="readonly">
-    <button id="btn_copy" class="btn_copy" onclick="copyResult()">📋 Copy</button>
+    <button id="btn_copy" class="btn_copy_length" onclick="copyResult()">📋 Copy</button>
     <script>
       let result = 0; // empty string
       const copyResult = async () => {
         try {
           result = document.getElementById('lengthResult').value;
           await navigator.clipboard.writeText(result);
-          console.log('debug: Result copied to clipboard');
-          document.getElementById("btn_copy").innerHTML = "✅ Copied!";
-          setTimeout(() => {  document.getElementById("btn_copy").innerHTML = "📋 Copy" ; }, 750); // đợi 0.75 giây trước khi về như cũ           
+          console.log('[debug] [length] Result copied to clipboard');
+          document.getElementById("btn_copy_length").innerHTML = "✅ Copied!";
+          setTimeout(() => {  document.getElementById("btn_copy_length").innerHTML = "📋 Copy" ; }, 750); // đợi 0.75 giây trước khi về như cũ           
         } catch (err) {
-          console.error('debug: Failed to copy: ', err); // nói thật thì dòng này cx ko để làm gì lắm, trừ khi sửa code liên quan đến copy
+          console.error('[debug] [length] Failed to copy: ', err); // nói thật thì dòng này cx ko để làm gì lắm, trừ khi sửa code liên quan đến copy
         }
       }
     </script>
