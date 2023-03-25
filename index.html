@@ -424,13 +424,13 @@
       let length_result = 0; // empty string
       const copyResult = async () => {
         try {
-          result = document.getElementById('lengthResult').value;
+          result = document.getElementById('dataResult').value;
           await navigator.clipboard.writeText(length_result);
           console.log('[debug] [length] Result copied to clipboard');
           document.getElementById("btn_copy_length").innerHTML = "✅ Copied!";
-          setTimeout(() => {  document.getElementById("btn_copy_length").innerHTML = "📋 Copy" ; }, 750); // đợi 0.75 giây trước khi về như cũ           
+          setTimeout(() => {  document.getElementById("btn_copy_data").innerHTML = "📋 Copy" ; }, 750); // đợi 0.75 giây trước khi về như cũ           
         } catch (err) {
-          console.error('[debug] [length] Failed to copy: ', err); // nói thật thì dòng này cx ko để làm gì lắm, trừ khi sửa code liên quan đến copy
+          console.error('[debug] [data] Failed to copy: ', err); // nói thật thì dòng này cx ko để làm gì lắm, trừ khi sửa code liên quan đến copy
         }
       }
     </script>
