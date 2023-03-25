@@ -74,7 +74,7 @@
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue * 1093.61;
                 } else if (lengthTo == 'km') { // why the hell
-                    document.getElementById('lengthResult').value = langthValue; // if you've ever felt useless remember this line of code
+                    document.getElementById('lengthResult').value = lengthValue; // if you've ever felt useless remember this line of code
                 }
             } else if (lengthFrom == 'mi') {
                 if (lengthTo == 'mi') { // why the hell!??
@@ -419,15 +419,15 @@
     </p>
 
     <p>Result: <input id="dataResult" readonly="readonly">
-    <button id="btn_copy_data" class="btn_copy_data" onclick="copyDataResult()">📋 Copy</button>
+    <button id="btn_copy_data" class="btn_copy_data" onclick="copyResult()">📋 Copy</button>
     <script>
       let length_result = 0; // empty string
       const copyResult = async () => {
         try {
           result = document.getElementById('dataResult').value;
           await navigator.clipboard.writeText(data_result);
-          console.log('[debug] [length] Result copied to clipboard');
-          document.getElementById("btn_copy_length").innerHTML = "✅ Copied!";
+          console.log('[debug] [data] Result copied to clipboard');
+          document.getElementById("btn_copy_data").innerHTML = "✅ Copied!";
           setTimeout(() => {  document.getElementById("btn_copy_data").innerHTML = "📋 Copy" ; }, 750); // đợi 0.75 giây trước khi về như cũ           
         } catch (err) {
           console.error('[debug] [data] Failed to copy: ', err); // nói thật thì dòng này cx ko để làm gì lắm, trừ khi sửa code liên quan đến copy
