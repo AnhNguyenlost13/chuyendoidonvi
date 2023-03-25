@@ -421,7 +421,7 @@
     <p>Result: <input id="dataResult" readonly="readonly">
     <button id="btn_copy_data" class="btn_copy_data" onclick="copyResult()">📋 Copy</button>
     <script>
-      let data_result = 0; // empty string
+      let data_result = dataValue; // empty string
       const copyResult = async () => {
         try {
           result = document.getElementById('dataResult').value;
