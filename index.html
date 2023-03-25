@@ -206,7 +206,7 @@
                 } else if (lengthTo == 'hm') {
                     document.getElementById('lengthResult').value = lengthValue / 1000;
                 } else if (lengthTo == 'dm') { 
-                    document.getElementById('lengthResult').value = value; // fucking idiots click on this shit, especially PMT
+                    document.getElementById('lengthResult').value = lengthValue; // idiots click on this, especially PMT
                 } else if (lengthTo == 'cm') {
                     document.getElementById('lengthResult').value = lengthValue * 10;
                 } else if (lengthTo == 'mm') {
@@ -353,7 +353,7 @@
     </p>
 
     <p>Result: <input id="lengthResult" readonly="readonly">
-    <button id="btn_copy_length" class="btn_copy_length" onclick="copyLengthResult()">📋 Copy</button>
+    <button id="btn_copy_length" class="btn_copy_length" onclick="copyResult()">📋 Copy</button>
     <script>
       let length_result = 0; // empty string
       const copyResult = async () => {
@@ -421,7 +421,7 @@
     <p>Result: <input id="dataResult" readonly="readonly">
     <button id="btn_copy_data" class="btn_copy_data" onclick="copyResult()">📋 Copy</button>
     <script>
-      let length_result = 0; // empty string
+      let data_result = 0; // empty string
       const copyResult = async () => {
         try {
           result = document.getElementById('dataResult').value;
