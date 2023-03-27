@@ -437,5 +437,57 @@
         
     </p>
   </div>
+  <div>
+    <h2>Weight</h2>
+    <p>Value: <input type="number" id="weightValue" onchange="convertWeight()"></p>
+    <p>From:
+        <select id="weightFrom" onchange="convertWeight()"> 
+            <option value="ct">Carats</option>
+            <option value="g">Grams</option>
+            <option value="mg">Milligrams</option>
+            <option value="kg">Kilograms</option>
+            <option value="t">Tonnes</option>
+            <option value="oz">ounces</option>
+            <option value="lb">Pounds</option>
+            <option value="st">Stones</option>
+            <option value="st">Short tons</option>
+            <option value="lt">Long tons</option> // oh no.
+        </select>
+    </p>
+
+    <p>To:
+       <select id="weightFrom" onchange="convertWeight()"> 
+            <option value="ct">Carats</option>
+            <option value="g">Grams</option>
+            <option value="mg">Milligrams</option>
+            <option value="kg">Kilograms</option>
+            <option value="t">Tonnes</option>
+            <option value="oz">ounces</option>
+            <option value="lb">Pounds</option>
+            <option value="st">Stones</option>
+            <option value="st">Short tons</option>
+            <option value="lt">Long tons</option> // are you a genshin player?
+        </select>
+    </p>
+
+    <p>Result: <input id="weightResult" readonly="readonly">
+    <button id="btn_copy_weight" class="btn_copy_weight" onclick="copyResult()">📋 Copy</button>
+    <script>
+      let weight_result = weightValue; // empty string
+      const copyResult = async () => {
+        try {
+          result = document.getElementById('weightResult').value;
+          await navigator.clipboard.writeText(weight_result);
+          console.log('[debug] [weight] Result copied to clipboard');
+          document.getElementById("btn_copy_weight").innerHTML = "✅ Copied!";
+          setTimeout(() => {  document.getElementById("btn_copy_weight").innerHTML = "📋 Copy" ; }, 750); // đợi 0.75 giây trước khi về như cũ           
+        } catch (err) {
+          console.error('[debug] [weight] Failed to copy: ', err); // nói thật thì dòng này cx ko để làm gì lắm, trừ khi sửa code liên quan đến copy
+        }
+      }
+    </script>
+        
+    </p>
+  </div>
 </body>
 </html>
