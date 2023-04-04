@@ -9,10 +9,10 @@
 
 ## các đơn vị chuyển đổi được
 - [x] Độ dài
-- [ ] Cân nặng
-- [ ] Dữ liệu
-- [ ] Điện
-- [ ] Thời gian
+- [x] Cân nặng
+- [x] Dữ liệu
+- [x] Điện
+- [x] Thời gian
 - [ ] Nhiệt độ
 - [ ] Vận tốc
 - [ ] Năng lượng
