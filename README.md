@@ -1,4 +1,4 @@
-# Trình chuyển đổi đơn vị
+<h1 align="center"><img src="banner.png" alt="Banner"></h1>
 
 Được làm bởi [@AnhNguyenlost13](https://github.com/AnhNguyenlost13) và [@profcoder69420](https://github.com/profcoder69420) và 1 người khác<br>
 
