@@ -1,4 +1,4 @@
-Được làm bởi [@AnhNguyenlost13](https://github.com/AnhNguyenlost13) và [@profcoder69420](https://github.com/profcoder69420) và <br>
+Được làm bởi [@AnhNguyenlost13](https://github.com/AnhNguyenlost13) và [@profcoder69420](https://github.com/profcoder69420) và Nguyễn Nguyên Huy không có github :( <br>
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/AnhNguyenlost13/projects)
 <h2>tại sao?</h2>
