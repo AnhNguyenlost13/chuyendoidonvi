@@ -2045,6 +2045,41 @@
     </script>
     </p>
   </div>
+  <div class="pi">
+    <h2>PI Generator</h2>
+    <p>Recommended max: 27, otherwise it's 49</p>
+    <p>Digits: <input type="number" id="piDigits" onchange="generatePI()" max="27"></p>
+    <p>Result: <input id="piField" readonly="readonly" placeholder="Empty!"></textarea></p>
+    <button id="btn_copy_PI" class="btn_copy_PI" onclick="copyGeneratedPI()">📋 Copy</button>
+    
+    <script>
+        function generatePI() {
+            piDigits = document.getElementById("piDigits").value
+            const generatedPI = Math.PI.toFixed(piDigits);
+            document.getElementById("piField").value = generatedPI
+            document.getElementById("btn_copy_PI").innerHTML = "📋 Copy " + piDigits + " digit(s)"
+        }
+        let generatedPI= 0; // empty string
+        const copyGeneratedPI = async () => {
+          piDigits = document.getElementById("piDigits").value
+          try {
+            if (document.getElementById('piField').value != '') { // kiểm tra xem giá trị có trống không
+              result = document.getElementById('piField').value; // đặt biến result
+              await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
+              console.debug('[debug] [PI generator] Result copied to clipboard'); // logger
+              document.getElementById("btn_copy_PI").innerHTML = "✅ Copied " + piDigits + " digit(s)!"; // đổi tên nút
+              setTimeout(() => {  document.getElementById("btn_copy_PI").innerHTML = "📋 Copy " + piDigits + " digit(s)" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            } else { // khi mà giá trị trống
+              console.warn('[debug] [PI generator] result is empty, why bother copying'); // logger
+              document.getElementById("btn_copy_PI").innerHTML = "⚠️ Empty!"; // đổi tên nút
+              setTimeout(() => {  document.getElementById("btn_copy_PI").innerHTML = "📋 Copy " + piDigits + " digit(s)" ; }, 750); // đợi 750 ms
+            }
+          } catch (err) {
+            console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
+          }
+        }
+    </script>
+  </div>
  </div>
 </div>
 </body>
