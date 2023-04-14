@@ -80,6 +80,12 @@ div.angle {
   border: 40px solid #3AAFA9;
 }
 
+div.pi {
+  display: inline-block;
+  margin-left: auto;
+  border: 40px solid #3AAFA9;
+}
+
 div.a {
   display: block;
   margin-left: auto;
