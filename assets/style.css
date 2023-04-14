@@ -1,0 +1,111 @@
+body {
+  background-color: rgb(58, 175, 169)
+}
+
+h1 {
+  color: white;
+  font-family: "Segoe UI Variable Display", "San Francisco", "Fira Sans Semibold";
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  color: #2B7A78;
+  font-family: "Calibri"
+}
+
+input[type="number"] {
+  background-color: rgb(222, 230, 241);
+}
+
+div.length {
+  display: inline-block;
+  margin-left: auto;
+  border: 40px solid #3AAFA9;
+}
+
+div.data {
+  display: inline-block;
+  border: 40px solid #3AAFA9;
+}
+
+div.weight {
+  display: inline-block;
+  border: 40px solid #3AAFA9;
+}
+
+div.power {
+  display: inline-block;
+  margin-right: auto;
+  border: 40px solid #3AAFA9;
+}
+
+div.energy {
+  display: inline-block;
+  margin-left: auto;
+  border: 40px solid #3AAFA9;
+}
+
+div.time {
+  display: inline-block;
+  border: 40px solid #3AAFA9;
+}
+
+div.temperature {
+  display: inline-block;
+  border: 40px solid #3AAFA9;
+}
+
+div.velocity {
+  display: inline-block;
+  margin-right: auto;
+  border: 40px solid #3AAFA9;
+}
+
+div.hypotenuse {
+  display: inline-block;
+  margin-left: auto;
+  border: 40px solid #3AAFA9;
+}
+
+div.trig {
+  display: inline-block;
+  margin-left: auto;
+  border: 40px solid #3AAFA9;
+}
+
+div.angle {
+  display: inline-block;
+  margin-left: auto;
+  border: 40px solid #3AAFA9;
+}
+
+div.pi {
+  display: inline-block;
+  margin-left: auto;
+  border: 40px solid #3AAFA9;
+}
+
+div.a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.b {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.c {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.d {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
