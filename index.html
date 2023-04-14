@@ -1461,39 +1461,39 @@
     <p>Value: <input type="number" id="lengthValue" onchange="convertLength()" min="0" value=""></p>
     <p>From:
         <select id="lengthFrom" onchange="convertLength()">
-            <option value="km">Kilometers</option>
-            <option value="mi">Miles</option>
-            <option value="hm">Hectometers</option>
-            <option value="dam">Decameters</option>
-            <option value="m">Meters</option>
-            <option value="yd">Yards</option>
+            <option value="km">Ki-lô-mét</option>
+            <option value="mi">Dặm</option>
+            <option value="hm">Héc-tô-mét</option>
+            <option value="dam">Đề-ca-mét</option>
+            <option value="m">Mét</option>
+            <option value="yd">Yard</option>
             <option value="ft">Feet</option>
-            <option value="dm">Decimeters</option>
-            <option value="cm">Centimeters</option>
-            <option value="in">Inches</option>
-            <option value="mm">Millimeters</option>
+            <option value="dm">Đề-xi-mét</option>
+            <option value="cm">Xăng-ti-mét</option>
+            <option value="in">Inch</option>
+            <option value="mm">Mi-li-mét</option>
         </select>
     </p>
 
     <p>To:
         <select id="lengthTo" onchange="convertLength()">
-            <option value="km">Kilometers</option>
-            <option value="mi">Miles</option>
-            <option value="hm">Hectometers</option>
-            <option value="dam">Decameters</option>
-            <option value="m">Meters</option>
-            <option value="yd">Yards</option>
+            <option value="km">Ki-lô-mét</option>
+            <option value="mi">Dặm</option>
+            <option value="hm">Héc-tô-mét</option>
+            <option value="dam">Đề-ca-mét</option>
+            <option value="m">Mét</option>
+            <option value="yd">Yard</option>
             <option value="ft">Feet</option>
-            <option value="dm">Decimeters</option>
-            <option value="cm">Centimeters</option>
-            <option value="in">Inches</option>
-            <option value="mm">Millimeters</option>
+            <option value="dm">Đề-xi-mét</option>
+            <option value="cm">Xăng-ti-mét</option>
+            <option value="in">Inch</option>
+            <option value="mm">Mi-li-mét</option>
             
         </select>
     </p>
 
        <p>Result: <input id="lengthResult" readonly="readonly">
-    <button id="btn_copy_length" class="btn_copy_length" onclick="copyLengthResult()">📋 Copy</button>
+    <button id="btn_copy_length" class="btn_copy_length" onclick="copyLengthResult()">📋 Sao chép</button>
     <script>
       let lengthResult = 0; // empty string
       const copyLengthResult = async () => {
@@ -1502,12 +1502,12 @@
             result = document.getElementById('lengthResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [length] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_length").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_length").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_length").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_length").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [length] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_length").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_length").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_length").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
@@ -1564,7 +1564,7 @@
     </p>
 
     <p>Result: <input id="dataResult" readonly="readonly">
-    <button id="btn_copy_data" class="btn_copy_data" onclick="copyDataResult()">📋 Copy</button>
+    <button id="btn_copy_data" class="btn_copy_data" onclick="copyDataResult()">📋 Sao chép</button>
      <script>
       let dataResult = 0; // empty string
       const copyDataResult = async () => {
@@ -1573,12 +1573,12 @@
             result = document.getElementById('dataResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [data] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_data").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_data").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_data").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_data").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [data] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_data").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_data").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_data").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
@@ -1594,31 +1594,31 @@
     <p>From:
         <select id="weightFrom" onchange="convertWeight()"> 
             <option value="ct">Carats</option>
-            <option value="g">Grams</option>
-            <option value="mg">Milligrams</option>
-            <option value="kg">Kilograms</option>
-            <option value="t">Tonnes</option>
-            <option value="oz">Ounces</option>
-            <option value="lb">Pounds</option>
-            <option value="st">Stones</option>
+            <option value="g">Gam</option>
+            <option value="mg">Miligam</option>
+            <option value="kg">Kilogam</option>
+            <option value="t">Tấn</option>
+            <option value="oz">Ounce</option>
+            <option value="lb">Pound</option>
+            <option value="st">Stone</option>
         </select>
     </p>
 
     <p>To:
        <select id="weightTo" onchange="convertWeight()"> 
             <option value="ct">Carats</option>
-            <option value="g">Grams</option>
-            <option value="mg">Milligrams</option>
-            <option value="kg">Kilograms</option>
-            <option value="t">Tonnes</option>
-            <option value="oz">Ounces</option>
-            <option value="lb">Pounds</option>
-            <option value="st">Stones</option>
+            <option value="g">Gam</option>
+            <option value="mg">Miligam</option>
+            <option value="kg">Kilogam</option>
+            <option value="t">Tấn</option>
+            <option value="oz">Ounce</option>
+            <option value="lb">Pound</option>
+            <option value="st">Stone</option>
         </select>
     </p>
 
     <p>Result: <input id="weightResult" readonly="readonly">
-    <button id="btn_copy_weight" class="btn_copy_weight" onclick="copyWeightResult()">📋 Copy</button>
+    <button id="btn_copy_weight" class="btn_copy_weight" onclick="copyWeightResult()">📋 Sao chép</button>
     <script>
       let weightResult = 0; // empty string
       const copyWeightResult = async () => {
@@ -1627,12 +1627,12 @@
             result = document.getElementById('weightResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [weight] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_weight").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_weight").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_weight").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_weight").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [weight] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_weight").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_weight").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_weight").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
@@ -1647,22 +1647,22 @@
     <p>Value: <input type="number" id="powerValue" onchange="convertPower()" min="0"></p>
     <p>From:
         <select id="powerFrom" onchange="convertPower()"> 
-            <option value="W">Watts</option>
-            <option value="kW">Kilowatts</option>
-            <option value="hp">Horsepower</option>
+            <option value="W">Oát</option>
+            <option value="kW">Ki-lô-oát</option>
+            <option value="hp">Mã lực</option>
         </select>
     </p>
 
     <p>To:
        <select id="powerTo" onchange="convertPower()"> 
-            <option value="W">Watts</option>
-            <option value="kW">Kilowatts</option>
-            <option value="hp">Horsepower</option>
+            <option value="W">Oát</option>
+            <option value="kW">Ki-lô Oát</option>
+            <option value="hp">Mã lực</option>
         </select>
     </p>
 
     <p>Result: <input id="powerResult" readonly="readonly">
-    <button id="btn_copy_power" class="btn_copy_power" onclick="copyPowerResult()">📋 Copy</button>
+    <button id="btn_copy_power" class="btn_copy_power" onclick="copyPowerResult()">📋 Sao chép</button>
     <script>
       let powerResult = 0; // empty string
       const copyPowerResult = async () => {
@@ -1671,12 +1671,12 @@
             result = document.getElementById('powerResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [power] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_power").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_power").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_power").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_power").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [power] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_power").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_power").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_power").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
@@ -1692,28 +1692,28 @@
     <p>Value: <input type="number" id="energyValue" onchange="convertEnergy()" min="0"></p>
     <p>From:
         <select id="energyFrom" onchange="convertEnergy()"> 
-            <option value="J">Joules</option>
-            <option value="kJ">Kilojoules</option>
-			<option value="kcal">Kilocalories</option>
-            <option value="gcal">Gram calories</option>
-            <option value="Wh">Watts hour</option>
-            <option value="kWh">Kilowatts hour</option>
+            <option value="J">Jun</option>
+            <option value="kJ">Ki-lô-jun</option>
+	    <option value="kcal">Ki-lô-calo</option>
+            <option value="gcal">Gam-calo</option>
+            <option value="Wh">Oát giờ</option>
+            <option value="kWh">Ki-lô-oát giờ</option>
         </select>
     </p>
 
     <p>To:
        <select id="energyTo" onchange="convertEnergy()"> 
-            <option value="J">Joules</option>
-            <option value="kJ">Kilojoules</option>
-			<option value="kcal">Kilocalories</option>
-            <option value="gcal">Gram calories</option>
-            <option value="Wh">Watts hour</option>
-            <option value="kWh">Kilowatts hour</option>
+            <option value="J">Jun</option>
+            <option value="kJ">Ki-lô-jun</option>
+	    <option value="kcal">Ki-lô-calo</option>
+            <option value="gcal">Gam-calo</option>
+            <option value="Wh">Oát giờ</option>
+            <option value="kWh">Ki-lô-oát giờ</option>
         </select>
     </p>
 
     <p>Result: <input id="energyResult" readonly="readonly">
-    <button id="btn_copy_energy" class="btn_copy_energy" onclick="copyEnergyResult()">📋 Copy</button>
+    <button id="btn_copy_energy" class="btn_copy_energy" onclick="copyEnergyResult()">📋 Sao chép</button>
     <script>
       let energyResult = 0; // empty string
       const copyEnergyResult = async () => {
@@ -1722,12 +1722,12 @@
             result = document.getElementById('energyResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [energy] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_energy").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_energy").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_energy").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_energy").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [energy] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_energy").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_energy").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_energy").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
@@ -1741,36 +1741,36 @@
     <p>Value: <input type="number" id="timeValue" onchange="convertTime()" min="0"></p>
     <p>From:
         <select id="timeFrom" onchange="convertTime()">
-            <option value="µs">Microseconds</option>
-            <option value="ms">Milliseconds</option>
-            <option value="s">Seconds</option>
-            <option value="mins">Minutes</option>
-            <option value="hrs">Hours</option>
-            <option value="days">Days</option>
-            <option value="w">Weeks</option>
-            <option value="y">Years</option>
-            <option value="dec">Decades</option>
-            <option value="cen">Centuries</option>
+            <option value="µs">Micro giây</option>
+            <option value="ms">Mili giây/option>
+            <option value="s">Giây</option>
+            <option value="mins">Phút</option>
+            <option value="hrs">Giờ/option>
+            <option value="days">Ngày</option>
+            <option value="w">Tuần</option>
+            <option value="y">Năm</option>
+            <option value="dec">Thập kỉ</option>
+            <option value="cen">Thế kỉ</option>
         </select>
     </p>
 
     <p>To:
         <select id="timeTo" onchange="convertTime()">
-            <option value="µs">Microseconds</option>
-            <option value="ms">Milliseconds</option>
-            <option value="s">Seconds</option>
-            <option value="mins">Minutes</option>
-            <option value="hrs">Hours</option>
-            <option value="days">Days</option>
-            <option value="w">Weeks</option>
-            <option value="y">Years</option>
-            <option value="dec">Decades</option>
-            <option value="cen">Centuries</option>
+            <option value="µs">Micro giây</option>
+            <option value="ms">Mili giây/option>
+            <option value="s">Giây</option>
+            <option value="mins">Phút</option>
+            <option value="hrs">Giờ/option>
+            <option value="days">Ngày</option>
+            <option value="w">Tuần</option>
+            <option value="y">Năm</option>
+            <option value="dec">Thập kỉ</option>
+            <option value="cen">Thế kỉ</option>
         </select>
     </p>
 
        <p>Result: <input id="timeResult" readonly="readonly">
-    <button id="btn_copy_time" class="btn_copy_time" onclick="copyTimeResult()">📋 Copy</button>
+    <button id="btn_copy_time" class="btn_copy_time" onclick="copyTimeResult()">📋 Sao chép</button>
     <script>
       let timeResult = 0; // empty string
       const copyTimeResult = async () => {
@@ -1779,12 +1779,12 @@
             result = document.getElementById('timeResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [time] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_time").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_time").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_time").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_time").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [time] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_time").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_time").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_time").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
@@ -1793,27 +1793,27 @@
     </script>
     </p>
   </div>
-	<div class=	"temperature">
-    <h2>Temperature</h2>
-    <p>Value: <input type="number" id="temperatureValue" onchange="convertTemperature()"></p>
-    <p>From:
+	<div class="temperature">
+    <h2>Nhiệt độ</h2>
+    <p>Giá trị: <input type="number" id="temperatureValue" onchange="convertTemperature()"></p>
+    <p>Từ:
         <select id="temperatureFrom" onchange="convertTemperature()">
             <option value="k">Kelvin</option>
-            <option value="c">Degree Celsius</option>
-            <option value="f">Degree Farenheit</option>
+            <option value="c">Độ C</option>
+            <option value="f">Độ F</option>
         </select>
     </p>
 
-    <p>To:
+    <p>Sang:
         <select id="temperatureTo" onchange="convertTemperature()">
             <option value="k">Kelvin</option>
-            <option value="c">Degree Celsius</option>
-            <option value="f">Degree Farenheit</option>
+            <option value="c">Độ C</option>
+            <option value="f">Độ F</option>
         </select>
     </p>
 
        <p>Result: <input id="temperatureResult" readonly="readonly">
-    <button id="btn_copy_temperature" class="btn_copy_temperature" onclick="copyTemperatureResult()">📋 Copy</button>
+    <button id="btn_copy_temperature" class="btn_copy_temperature" onclick="copyTemperatureResult()">📋 Sao chép</button>
     <script>
       let temperatureResult = 0; // empty string
       const copyTemperatureResult = async () => {
@@ -1822,12 +1822,12 @@
             result = document.getElementById('temperatureResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [temperature] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_temperature").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_temperature").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_temperature").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_temperature").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [temperature] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_temperature").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_temperature").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_temperature").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err);
@@ -1836,16 +1836,16 @@
     </script>
     </p>
   </div>
-  	<div class="velocity">
-    <h2>Velocity</h2>
-    <p>Value: <input type="number" id="velocityValue" onchange="convertVelocity()" min="0"></p>
+    <div class="velocity">
+    <h2>Vận tốc</h2>
+    <p>Giá trị: <input type="number" id="velocityValue" onchange="convertVelocity()" min="0"></p>
     <p>From:
         <select id="velocityFrom" onchange="convertVelocity()">
-            <option value="kph">Kilometers per hour</option>
+            <option value="kph">Ki-lô-mét trên giờ</option>
             <option value="mps">Meters per second</option>
             <option value="mpm">Meters per minute</option>
-			<option value="miph">Miles per hour</option>
-			<option value="kn">Knot</option>
+	    <option value="miph">Miles per hour</option>
+            <option value="kn">Knot</option>
         </select>
     </p>
 
@@ -1860,7 +1860,7 @@
     </p>
 
        <p>Result: <input id="velocityResult" readonly="readonly">
-    <button id="btn_copy_velocity" class="btn_copy_velocity" onclick="copyVelocityResult()">📋 Copy</button>
+    <button id="btn_copy_velocity" class="btn_copy_velocity" onclick="copyVelocityResult()">📋 Sao chép</button>
     <script>
       let velocityResult = 0; // empty string
       const copyVelocityResult = async () => {
@@ -1869,12 +1869,12 @@
             result = document.getElementById('velocityResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [velocity] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_velocity").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_velocity").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_velocity").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_velocity").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [velocity] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_velocity").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_velocity").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_velocity").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err);
@@ -1893,7 +1893,7 @@
     <input id="sideA" type="number" placeholder="Side A" onchange="calculateHypotenuse()">
     <input id="sideB" type="number" placeholder="Side B" onchange="calculateHypotenuse()">
     <p>Hypotenuse = <input id="hypotenuseResult" readonly="readonly">
-    <button id="btn_copy_hypotenuse" class="btn_copy_hypotenuse" onclick="copyHypotenuseResult()">📋 Copy</button></p>
+    <button id="btn_copy_hypotenuse" class="btn_copy_hypotenuse" onclick="copyHypotenuseResult()">📋 Sao chép</button></p>
     <script>
       let hypotenuse = 0;
       function calculateHypotenuse() {
@@ -1914,12 +1914,12 @@
 		  if (hypotenuse != '') { // kiểm tra xem giá trị có trống không
             await navigator.clipboard.writeText(hypotenuse); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [hypotenuse] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_hypotenuse").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_hypotenuse").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_hypotenuse").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_hypotenuse").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [hypotenuse] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_hypotenuse").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_hypotenuse").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_hypotenuse").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
@@ -1947,7 +1947,7 @@
     </select>
    <span>(<input type="number" id="trigValue" placeholder="Value" onchange="convertTrig()" min="0" style="width: 18%">) </span>
    <p>Result: <input id="trigResult" readonly="readonly">
-<button id="btn_copy_trig" class="btn_copy_trig" onclick="copyTrigResult()">📋 Copy</button>
+<button id="btn_copy_trig" class="btn_copy_trig" onclick="copyTrigResult()">📋 Sao chép</button>
 <script>
   let trigResult = 0; // empty string
   document.getElementById('trigFromHyp').style = "display:none"; // hide hyp variant
@@ -1966,12 +1966,12 @@
             result = document.getElementById('trigResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [trig] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_trig").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_trig").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_trig").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_trig").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
         } else { // khi mà giá trị trống
             console.warn('[debug] [trig] result is empty, why bother copying'); // logger
             document.getElementById("btn_copy_trig").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_trig").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_trig").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
         }
         } catch (err) {
         console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
@@ -2022,7 +2022,7 @@
     </p>
 
        <p>Result: <input id="angleResult" readonly="readonly">
-    <button id="btn_copy_angle" class="btn_copy_angle" onclick="copyAngleResult()">📋 Copy</button>
+    <button id="btn_copy_angle" class="btn_copy_angle" onclick="copyAngleResult()">📋 Sao chép</button>
     <script>
       let angleResult = 0; // empty string
       const copyAngleResult = async () => {
@@ -2031,12 +2031,12 @@
             result = document.getElementById('angleResult').value; // đặt biến result
             await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
             console.debug('[debug] [angle] Result copied to clipboard'); // logger
-            document.getElementById("btn_copy_angle").innerHTML = "✅ Copied!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_angle").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+            document.getElementById("btn_copy_angle").innerHTML = "✅ Đã sao chép!"; // đổi tên nút
+            setTimeout(() => {  document.getElementById("btn_copy_angle").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
 		  } else { // khi mà giá trị trống
 		    console.warn('[debug] [angle] result is empty, why bother copying'); // logger
 			document.getElementById("btn_copy_angle").innerHTML = "⚠️ Empty!"; // đổi tên nút
-            setTimeout(() => {  document.getElementById("btn_copy_angle").innerHTML = "📋 Copy" ; }, 750); // đợi 750 ms
+            setTimeout(() => {  document.getElementById("btn_copy_angle").innerHTML = "📋 Sao chép" ; }, 750); // đợi 750 ms
 	      }
         } catch (err) {
           console.error('debug: Failed to copy: ', err);
@@ -2050,14 +2050,14 @@
     <p>Recommended max: 27, otherwise it's 49</p>
     <p>Digits: <input type="number" id="piDigits" onchange="generatePI()" max="27"></p>
     <p>Result: <input id="piField" readonly="readonly" placeholder="Empty!"></textarea></p>
-    <button id="btn_copy_PI" class="btn_copy_PI" onclick="copyGeneratedPI()">📋 Copy</button>
+    <button id="btn_copy_PI" class="btn_copy_PI" onclick="copyGeneratedPI()">📋 Sao chép</button>
     
     <script>
         function generatePI() {
             piDigits = document.getElementById("piDigits").value
             const generatedPI = Math.PI.toFixed(piDigits);
             document.getElementById("piField").value = generatedPI
-            document.getElementById("btn_copy_PI").innerHTML = "📋 Copy " + piDigits + " digit(s)"
+            document.getElementById("btn_copy_PI").innerHTML = "📋 Sao chép " + piDigits + " digit(s)"
         }
         let generatedPI= 0; // empty string
         const copyGeneratedPI = async () => {
@@ -2068,11 +2068,11 @@
               await navigator.clipboard.writeText(result); // viết vào bộ nhớ tạm kết quả của biến result
               console.debug('[debug] [PI generator] Result copied to clipboard'); // logger
               document.getElementById("btn_copy_PI").innerHTML = "✅ Copied " + piDigits + " digit(s)!"; // đổi tên nút
-              setTimeout(() => {  document.getElementById("btn_copy_PI").innerHTML = "📋 Copy " + piDigits + " digit(s)" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
+              setTimeout(() => {  document.getElementById("btn_copy_PI").innerHTML = "📋 Sao chép " + piDigits + " digit(s)" ; }, 750); // đợi 750 ms (0.75 giây), rồi đổi lại như cũ
             } else { // khi mà giá trị trống
               console.warn('[debug] [PI generator] result is empty, why bother copying'); // logger
               document.getElementById("btn_copy_PI").innerHTML = "⚠️ Empty!"; // đổi tên nút
-              setTimeout(() => {  document.getElementById("btn_copy_PI").innerHTML = "📋 Copy " + piDigits + " digit(s)" ; }, 750); // đợi 750 ms
+              setTimeout(() => {  document.getElementById("btn_copy_PI").innerHTML = "📋 Sao chép " + piDigits + " digit(s)" ; }, 750); // đợi 750 ms
             }
           } catch (err) {
             console.error('debug: Failed to copy: ', err); // debug nhưng không để làm gì lắm
