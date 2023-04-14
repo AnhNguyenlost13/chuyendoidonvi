@@ -70,19 +70,17 @@ div.hypotenuse {
 
 div.trig {
   display: inline-block;
-  margin-left: auto;
   border: 40px solid #3AAFA9;
 }
 
 div.angle {
   display: inline-block;
-  margin-left: auto;
   border: 40px solid #3AAFA9;
 }
 
 div.pi {
   display: inline-block;
-  margin-left: auto;
+  margin-right: auto;
   border: 40px solid #3AAFA9;
 }
 
