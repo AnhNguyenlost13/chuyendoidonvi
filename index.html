@@ -1742,10 +1742,10 @@
     <p>From:
         <select id="timeFrom" onchange="convertTime()">
             <option value="µs">Micro giây</option>
-            <option value="ms">Mili giây/option>
+            <option value="ms">Mili giây</option>
             <option value="s">Giây</option>
             <option value="mins">Phút</option>
-            <option value="hrs">Giờ/option>
+            <option value="hrs">Giờ</option>
             <option value="days">Ngày</option>
             <option value="w">Tuần</option>
             <option value="y">Năm</option>
@@ -1757,10 +1757,10 @@
     <p>To:
         <select id="timeTo" onchange="convertTime()">
             <option value="µs">Micro giây</option>
-            <option value="ms">Mili giây/option>
+            <option value="ms">Mili giây</option>
             <option value="s">Giây</option>
             <option value="mins">Phút</option>
-            <option value="hrs">Giờ/option>
+            <option value="hrs">Giờ</option>
             <option value="days">Ngày</option>
             <option value="w">Tuần</option>
             <option value="y">Năm</option>
@@ -1842,20 +1842,20 @@
     <p>From:
         <select id="velocityFrom" onchange="convertVelocity()">
             <option value="kph">Ki-lô-mét trên giờ</option>
-            <option value="mps">Meters per second</option>
-            <option value="mpm">Meters per minute</option>
-	    <option value="miph">Miles per hour</option>
-            <option value="kn">Knot</option>
+            <option value="mps">Mét trên giây</option>
+            <option value="mpm">Mét trên phút</option>
+	    <option value="miph">Dặm trên giờ</option>
+            <option value="kn">Hải lý trên giờ</option>
         </select>
     </p>
 
     <p>To:
         <select id="velocityTo" onchange="convertVelocity()">
-            <option value="kph">Kilometers per hour</option>
-            <option value="mps">Meters per second</option>
-            <option value="mpm">Meters per minute</option>
-			<option value="miph">Miles per hour</option>
-			<option value="kn">Knot</option>
+            <option value="kph">Ki-lô-mét trên giờ</option>
+            <option value="mps">Mét trên giây</option>
+            <option value="mpm">Mét trên phút</option>
+	    <option value="miph">Dặm trên giờ</option>
+            <option value="kn">Hải lý trên giờ</option>
         </select>
     </p>
 
@@ -1887,7 +1887,7 @@
  <h1>Geometrical Utilities</h1>
  <div class="c" style="width:100%">
   <div class="hypotenuse">
-   <h2>Calculate Hypotenuse</h2>
+   <h2>Tính cạnh huyền của một tam giác vuông</h2>
    <p> (Tính cạnh huyền của một tam giác vuông cho sẵn 2 cạnh góc vuông)</p>
     <p>Enter the lengths of the two sides:</p>
     <input id="sideA" type="number" placeholder="Side A" onchange="calculateHypotenuse()">
@@ -2046,8 +2046,8 @@
     </p>
   </div>
   <div class="pi">
-    <h2>PI Generator</h2>
-    <p>Recommended max: 27, otherwise it's 49</p>
+    <h2>Tạo chữ số PI</h2>
+    <p>Max: 49 chữ số</p>
     <p>Digits: <input type="number" id="piDigits" onchange="generatePI()" max="27"></p>
     <p>Result: <input id="piField" readonly="readonly" placeholder="Empty!"></textarea></p>
     <button id="btn_copy_PI" class="btn_copy_PI" onclick="copyGeneratedPI()">📋 Sao chép</button>
