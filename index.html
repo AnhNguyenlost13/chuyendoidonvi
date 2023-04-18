@@ -1453,13 +1453,12 @@
 	<link rel="icon" href="https://raw.githubusercontent.com/AnhNguyenlost13/projects/main/assets/favicon.ico">
 </head>
 <body>
-<!-- TODO: THEME PICKER -->
  <h1>Trình chuyển đổi đơn vị</h1>
  <div class="a" style="width:100%">
   <div class="length">
     <h2>Độ dài</h2>
-    <p>Value: <input type="number" id="lengthValue" onchange="convertLength()" min="0" value=""></p>
-    <p>From:
+    <p>Số đo: <input type="number" id="lengthValue" onchange="convertLength()" min="0" value=""></p>
+    <p>Từ:
         <select id="lengthFrom" onchange="convertLength()">
             <option value="km">Ki-lô-mét</option>
             <option value="mi">Dặm</option>
@@ -1475,7 +1474,7 @@
         </select>
     </p>
 
-    <p>To:
+    <p>Sang:
         <select id="lengthTo" onchange="convertLength()">
             <option value="km">Ki-lô-mét</option>
             <option value="mi">Dặm</option>
@@ -1492,7 +1491,7 @@
         </select>
     </p>
 
-       <p>Result: <input id="lengthResult" readonly="readonly">
+       <p>Kết quả: <input id="lengthResult" readonly="readonly">
     <button id="btn_copy_length" class="btn_copy_length" onclick="copyLengthResult()">📋 Sao chép</button>
     <script>
       let lengthResult = 0; // empty string
@@ -1518,8 +1517,8 @@
   </div>
   <div class="data">
     <h2>Dữ liệu</h2>
-    <p>Value: <input type="number" id="dataValue" onchange="convertData()" min="0"></p>
-    <p>From:
+    <p>Số đo: <input type="number" id="dataValue" onchange="convertData()" min="0"></p>
+    <p>Từ:
         <select id="dataFrom" onchange="convertData()"> // không cần bit đâu đúng ko, 1 byte = 8 bit mà
             <option value="B">Bytes</option>
             <option value="KB">Kilobytes</option>
@@ -1541,7 +1540,7 @@
         </select>
     </p>
 
-    <p>To:
+    <p>Sang:
         <select id="dataTo" onchange="convertData()">
             <option value="B">Bytes</option>
             <option value="KB">Kilobytes</option>
@@ -1563,7 +1562,7 @@
         </select>
     </p>
 
-    <p>Result: <input id="dataResult" readonly="readonly">
+    <p>Kết quả: <input id="dataResult" readonly="readonly">
     <button id="btn_copy_data" class="btn_copy_data" onclick="copyDataResult()">📋 Sao chép</button>
      <script>
       let dataResult = 0; // empty string
@@ -1590,8 +1589,8 @@
   </div>
   <div class="weight">
     <h2>Cân nặng</h2>
-    <p>Value: <input type="number" id="weightValue" onchange="convertWeight()" min="0"></p>
-    <p>From:
+    <p>Số đo: <input type="number" id="weightValue" onchange="convertWeight()" min="0"></p>
+    <p>Từ:
         <select id="weightFrom" onchange="convertWeight()"> 
             <option value="ct">Carats</option>
             <option value="g">Gam</option>
@@ -1604,7 +1603,7 @@
         </select>
     </p>
 
-    <p>To:
+    <p>Sang:
        <select id="weightTo" onchange="convertWeight()"> 
             <option value="ct">Carats</option>
             <option value="g">Gam</option>
@@ -1617,7 +1616,7 @@
         </select>
     </p>
 
-    <p>Result: <input id="weightResult" readonly="readonly">
+    <p>Kết quả: <input id="weightResult" readonly="readonly">
     <button id="btn_copy_weight" class="btn_copy_weight" onclick="copyWeightResult()">📋 Sao chép</button>
     <script>
       let weightResult = 0; // empty string
@@ -1644,8 +1643,8 @@
   </div>
   <div class="power">
     <h2>Điện</h2>
-    <p>Value: <input type="number" id="powerValue" onchange="convertPower()" min="0"></p>
-    <p>From:
+    <p>Số đo: <input type="number" id="powerValue" onchange="convertPower()" min="0"></p>
+    <p>Từ:
         <select id="powerFrom" onchange="convertPower()"> 
             <option value="W">Oát</option>
             <option value="kW">Ki-lô-oát</option>
@@ -1653,7 +1652,7 @@
         </select>
     </p>
 
-    <p>To:
+    <p>Sang:
        <select id="powerTo" onchange="convertPower()"> 
             <option value="W">Oát</option>
             <option value="kW">Ki-lô Oát</option>
@@ -1661,7 +1660,7 @@
         </select>
     </p>
 
-    <p>Result: <input id="powerResult" readonly="readonly">
+    <p>Kết quả: <input id="powerResult" readonly="readonly">
     <button id="btn_copy_power" class="btn_copy_power" onclick="copyPowerResult()">📋 Sao chép</button>
     <script>
       let powerResult = 0; // empty string
@@ -1689,8 +1688,8 @@
  <div class="b" style="width:100%"> 
   <div class="energy">
     <h2>Năng lượng</h2>
-    <p>Value: <input type="number" id="energyValue" onchange="convertEnergy()" min="0"></p>
-    <p>From:
+    <p>Số đo: <input type="number" id="energyValue" onchange="convertEnergy()" min="0"></p>
+    <p>Từ:
         <select id="energyFrom" onchange="convertEnergy()"> 
             <option value="J">Jun</option>
             <option value="kJ">Ki-lô-jun</option>
@@ -1701,7 +1700,7 @@
         </select>
     </p>
 
-    <p>To:
+    <p>Sang:
        <select id="energyTo" onchange="convertEnergy()"> 
             <option value="J">Jun</option>
             <option value="kJ">Ki-lô-jun</option>
@@ -1712,7 +1711,7 @@
         </select>
     </p>
 
-    <p>Result: <input id="energyResult" readonly="readonly">
+    <p>Kết quả: <input id="energyResult" readonly="readonly">
     <button id="btn_copy_energy" class="btn_copy_energy" onclick="copyEnergyResult()">📋 Sao chép</button>
     <script>
       let energyResult = 0; // empty string
@@ -1738,8 +1737,8 @@
   </div>
   <div class="time">
     <h2>Thời gian</h2>
-    <p>Value: <input type="number" id="timeValue" onchange="convertTime()" min="0"></p>
-    <p>From:
+    <p>Số đo: <input type="number" id="timeValue" onchange="convertTime()" min="0"></p>
+    <p>Từ:
         <select id="timeFrom" onchange="convertTime()">
             <option value="µs">Micro giây</option>
             <option value="ms">Mili giây</option>
@@ -1754,7 +1753,7 @@
         </select>
     </p>
 
-    <p>To:
+    <p>Sang:
         <select id="timeTo" onchange="convertTime()">
             <option value="µs">Micro giây</option>
             <option value="ms">Mili giây</option>
@@ -1769,7 +1768,7 @@
         </select>
     </p>
 
-       <p>Result: <input id="timeResult" readonly="readonly">
+       <p>Kết quả: <input id="timeResult" readonly="readonly">
     <button id="btn_copy_time" class="btn_copy_time" onclick="copyTimeResult()">📋 Sao chép</button>
     <script>
       let timeResult = 0; // empty string
@@ -1795,7 +1794,7 @@
   </div>
 	<div class="temperature">
     <h2>Nhiệt độ</h2>
-    <p>Giá trị: <input type="number" id="temperatureValue" onchange="convertTemperature()"></p>
+    <p>Số đo: <input type="number" id="temperatureValue" onchange="convertTemperature()"></p>
     <p>Từ:
         <select id="temperatureFrom" onchange="convertTemperature()">
             <option value="k">Kelvin</option>
@@ -1812,7 +1811,7 @@
         </select>
     </p>
 
-       <p>Result: <input id="temperatureResult" readonly="readonly">
+       <p>Kết quả: <input id="temperatureResult" readonly="readonly">
     <button id="btn_copy_temperature" class="btn_copy_temperature" onclick="copyTemperatureResult()">📋 Sao chép</button>
     <script>
       let temperatureResult = 0; // empty string
@@ -1838,8 +1837,8 @@
   </div>
     <div class="velocity">
     <h2>Vận tốc</h2>
-    <p>Giá trị: <input type="number" id="velocityValue" onchange="convertVelocity()" min="0"></p>
-    <p>From:
+    <p>Số đo: <input type="number" id="velocityValue" onchange="convertVelocity()" min="0"></p>
+    <p>Từ:
         <select id="velocityFrom" onchange="convertVelocity()">
             <option value="kph">Ki-lô-mét trên giờ</option>
             <option value="mps">Mét trên giây</option>
@@ -1849,7 +1848,7 @@
         </select>
     </p>
 
-    <p>To:
+    <p>Sang:
         <select id="velocityTo" onchange="convertVelocity()">
             <option value="kph">Ki-lô-mét trên giờ</option>
             <option value="mps">Mét trên giây</option>
@@ -1859,7 +1858,7 @@
         </select>
     </p>
 
-       <p>Result: <input id="velocityResult" readonly="readonly">
+       <p>Kết quả: <input id="velocityResult" readonly="readonly">
     <button id="btn_copy_velocity" class="btn_copy_velocity" onclick="copyVelocityResult()">📋 Sao chép</button>
     <script>
       let velocityResult = 0; // empty string
@@ -1884,29 +1883,35 @@
     </p>
   </div>
  </div>
- <h1>Geometrical Utilities</h1>
+ <h1>Hình học</h1>
  <div class="c" style="width:100%">
   <div class="hypotenuse">
-   <h2>Tính cạnh huyền của một tam giác vuông</h2>
-   <p> (Tính cạnh huyền của một tam giác vuông cho sẵn 2 cạnh góc vuông)</p>
-    <p>Enter the lengths of the two sides:</p>
+   <h2>Tính cạnh huyền của một tam giác vuông.</h2>
+   <p> Note: Đơn vị của 2 số đo nên để cùng một độ dài.</p>
+    <p>Số đo của hai cạnh góc vuông.</p>
     <input id="sideA" type="number" placeholder="Side A" onchange="calculateHypotenuse()">
     <input id="sideB" type="number" placeholder="Side B" onchange="calculateHypotenuse()">
-    <p>Hypotenuse = <input id="hypotenuseResult" readonly="readonly">
+    <p>Số đo cạnh huyền: <input id="hypotenuseResult" readonly="readonly">
     <button id="btn_copy_hypotenuse" class="btn_copy_hypotenuse" onclick="copyHypotenuseResult()">📋 Sao chép</button></p>
     <script>
       let hypotenuse = 0;
       function calculateHypotenuse() {
         var sideA = document.getElementById("sideA").value;
         var sideB = document.getElementById("sideB").value;
-        if ((sideA <= 0 || sideB <= 0) && (sideA != '' || sideB != '')) {
-            console.error("[debug] [hypotenuse] value invalid!");
-            document.getElementById("hypotenuseResult").value = "invalid";
-            document.getElementById('btn_copy_hypotenuse').disabled = 'disabled';
+        if (sideA == '' || sideB == '') {
+            if (sideA <= 0 || sideB <= 0) {
+                console.error("[debug] [hypotenuse] value invalid!");
+                document.getElementById("hypotenuseResult").value = "invalid";
+                document.getElementById('btn_copy_hypotenuse').disabled = 'disabled';
+            } else {
+                hypotenuse = Math.sqrt(sideA * sideA + sideB * sideB);
+                document.getElementById("hypotenuseResult").value = hypotenuse
+                document.getElementById('btn_copy_hypotenuse').removeAttribute('disabled')
+            }
         } else {
-            hypotenuse = Math.sqrt(sideA * sideA + sideB * sideB);
-            document.getElementById("hypotenuseResult").value = hypotenuse
-            document.getElementById('btn_copy_hypotenuse').removeAttribute('disabled')
+                hypotenuse = Math.sqrt(sideA * sideA + sideB * sideB);
+                document.getElementById("hypotenuseResult").value = hypotenuse
+                document.getElementById('btn_copy_hypotenuse').removeAttribute('disabled')
         }
       }
       const copyHypotenuseResult = async () => {
@@ -1930,8 +1935,8 @@
    <div class = "trig">
     <h2> Công thức lượng giác </h2>
     <input type="checkbox" id="hyp" onchange="toggleHyperbolic() & convertTrig()">
-    <label for="hyp">Enable Hyperbolic</label>
-    <p> Note: All numbers there must be in <strong>degrees [°]</strong>. </p>
+    <label for="hyp">Hypecbol</label>
+    <p> Note: các số đo đều có đơn vị là <strong>độ [°]</strong>. </p>
     <span>
     <select id="trigFrom" onchange="convertTrig()" style="display:unset">
         <option value="sin">sin</option>
@@ -1946,7 +1951,7 @@
         <option value="coth">coth</option>
     </select>
    <span>(<input type="number" id="trigValue" placeholder="Value" onchange="convertTrig()" min="0" style="width: 18%">) </span>
-   <p>Result: <input id="trigResult" readonly="readonly">
+   <p>Kết quả: <input id="trigResult" readonly="readonly">
 <button id="btn_copy_trig" class="btn_copy_trig" onclick="copyTrigResult()">📋 Sao chép</button>
 <script>
   let trigResult = 0; // empty string
@@ -2004,8 +2009,8 @@
 </div>
  <div class="angle">
     <h2>Góc</h2>
-    <p>Value: <input type="number" id="angleValue" onchange="convertAngle()"></p>
-    <p>From:
+    <p>Số đo: <input type="number" id="angleValue" onchange="convertAngle()"></p>
+    <p>Từ:
         <select id="angleFrom" onchange="convertAngle()">
             <option value="rad">Radian</option>
             <option value="deg">Độ</option>
@@ -2013,7 +2018,7 @@
         </select>
     </p>
 
-    <p>To:
+    <p>Sang:
         <select id="angleTo" onchange="convertAngle()">
             <option value="rad">Radian</option>
             <option value="deg">Degree</option>
@@ -2021,7 +2026,7 @@
         </select>
     </p>
 
-       <p>Result: <input id="angleResult" readonly="readonly">
+       <p>Kết quả: <input id="angleResult" readonly="readonly">
     <button id="btn_copy_angle" class="btn_copy_angle" onclick="copyAngleResult()">📋 Sao chép</button>
     <script>
       let angleResult = 0; // empty string
@@ -2047,9 +2052,9 @@
   </div>
   <div class="pi">
     <h2>Tạo chữ số PI</h2>
-    <p>Max: 49 chữ số</p>
-    <p>Digits: <input type="number" id="piDigits" onchange="generatePI()" max="27"></p>
-    <p>Result: <input id="piField" readonly="readonly" placeholder="Empty!"></textarea></p>
+    <p>Max: 49 chữ số.</p>
+    <p>Số chữ số: <input type="number" id="piDigits" onchange="generatePI()" max="27"></p>
+    <p>Kết quả: <input id="piField" readonly="readonly" placeholder="Empty!"></textarea></p>
     <button id="btn_copy_PI" class="btn_copy_PI" onclick="copyGeneratedPI()">📋 Sao chép</button>
     
     <script>
@@ -2081,6 +2086,5 @@
     </script>
   </div>
  </div>
-</div>
 </body>
 </html>
