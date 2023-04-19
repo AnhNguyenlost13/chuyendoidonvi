@@ -9,12 +9,12 @@
             var lengthTo = document.getElementById('lengthTo').value;
             var lengthValue = document.getElementById('lengthValue').value;
 
-            if (document.getElementById('lengthValue').value < '0') {
+            if (document.getElementById('lengthValue').value <= '0') {
 			    console.log('[debug] [length] value too small, expected > 0');
 			    document.getElementById('lengthResult').value = 'invalid';
 				document.getElementById('btn_copy_length').disabled = 'disabled';
 			} else { document.getElementById('btn_copy_length').removeAttribute('disabled'); }
-            if (lengthFrom == 'km' && document.getElementById('lengthValue').value >= '0') {
+            if (lengthFrom == 'km' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue * 0.621371;
                 } else if (lengthTo == 'm') {
@@ -38,7 +38,7 @@
                 } else if (lengthTo == 'km') { // why the hell
                     document.getElementById('lengthResult').value = lengthValue; // if you've ever felt useless remember this line of code
                 }
-            } else if (lengthFrom == 'mi' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'mi' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') { // why the hell!??
                     document.getElementById('lengthResult').value = lengthValue;  // if you've ever felt useless remember this line of code
                 } else if (lengthTo == 'm') {
@@ -62,7 +62,7 @@
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue * 1760;
                 }
-            } else if (lengthFrom == 'm' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'm' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue / 1609.34;
                 } else if (lengthTo == 'm') { // why the hell man!?!?? why?????grfdfd
@@ -86,7 +86,7 @@
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue * 1.09361;
                 }
-            } else if (lengthFrom == 'ft' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'ft' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue / 5280;
                 } else if (lengthTo == 'm') {
@@ -110,7 +110,7 @@
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue / 3;
                 }
-            } else if (lengthFrom == 'dam' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'dam' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue / 160.934;
                 } else if (lengthTo == 'm') {
@@ -133,7 +133,7 @@
                     document.getElementById('lengthResult').value = lengthValue / 100;
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue * 10.9361; }
-            } else if (lengthFrom == 'hm' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'hm' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue / 16.0934;
                 } else if (lengthTo == 'm') {
@@ -156,7 +156,7 @@
                     document.getElementById('lengthResult').value = lengthValue / 10;
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue * 109.361; }
-            } else if (lengthFrom == 'dm' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'dm' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue / 16093.4;
                 } else if (lengthTo == 'm') {
@@ -179,7 +179,7 @@
                     document.getElementById('lengthResult').value = lengthValue / 10000;
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue / 9.144; }
-            } else if (lengthFrom == 'cm' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'cm' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue / 1609.34;
                 } else if (lengthTo == 'm') {
@@ -202,7 +202,7 @@
                     document.getElementById('lengthResult').value = lengthValue / 100000
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue / 91.44; }
-            } else if (lengthFrom == 'mm' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'mm' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue / 1609344;
                 } else if (lengthTo == 'm') {
@@ -225,7 +225,7 @@
                     document.getElementById('lengthResult').value = lengthValue / 1000000;
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue / 914.4; }
-            } else if (lengthFrom == 'in' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'in' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue / 63360;
                 } else if (lengthTo == 'm') {
@@ -248,7 +248,7 @@
                     document.getElementById('lengthResult').value = lengthValue / 39370;
                 } else if (lengthTo == 'yd') {
                     document.getElementById('lengthResult').value = lengthValue / 36; }
-            } else if (lengthFrom == 'yd' && document.getElementById('lengthValue').value >= '0') {
+            } else if (lengthFrom == 'yd' && document.getElementById('lengthValue').value > '0') {
                 if (lengthTo == 'mi') {
                     document.getElementById('lengthResult').value = lengthValue / 1760;
                 } else if (lengthTo == 'm') {
@@ -279,13 +279,13 @@
             var dataTo = document.getElementById('dataTo').value;
             var dataValue = document.getElementById('dataValue').value;
 
-            if (document.getElementById('dataValue').value < '0') {
+            if (document.getElementById('dataValue').value <= '0') {
 			    console.log('[debug] [data] value too small, expected > 0');
 			    document.getElementById('dataResult').value = 'invalid';
 				document.getElementById('btn_copy_data').disabled = 'disabled';
 			} else { document.getElementById('btn_copy_data').removeAttribute('disabled'); }
             
-            if (dataFrom == 'B' && document.getElementById('dataValue').value >= '0') {
+            if (dataFrom == 'B' && document.getElementById('dataValue').value > '0') {
                 if (dataTo == 'B') {
                     document.getElementById('dataResult').value = dataValue; // yep teacher hoa has pneumonoultramicroscopicsilicovolcanoconiosis
                 } else if (dataTo == 'KB') {
@@ -321,7 +321,7 @@
                 } else if (dataTo == 'YiB') {
                     document.getElementById('dataResult').value = dataValue / 1208925819614629174706176;
                 } // lessgooooo
-            } else if (dataFrom == 'KB' && document.getElementById('dataValue').value >= '0') {
+            } else if (dataFrom == 'KB' && document.getElementById('dataValue').value > '0') {
                 if (dataTo == 'B') {
                     document.getElementById('dataResult').value = dataValue * 1000;
                 } else if (dataTo == 'KB') {
@@ -357,7 +357,7 @@
                 } else if (dataTo == 'YiB') {
                     document.getElementById('dataResult').value = dataValue / 1208925819614629174706.176;
                 } // did you really just divide everything by 1000 and call it a day??
-		    } else if (dataFrom == 'KiB' && document.getElementById('dataValue').value >= '0') { // ok và?
+		    } else if (dataFrom == 'KiB' && document.getElementById('dataValue').value > '0') { // ok và?
                 if (dataTo == 'B') {
                     document.getElementById('dataResult').value = dataValue * 1024;
                 } else if (dataTo == 'KB') {
@@ -393,7 +393,7 @@
                 } else if (dataTo == 'YiB') {
                     document.getElementById('dataResult').value = dataValue / 1180591620717411303424;
                 } // took me forever to figure out the pattern.
-			} else if (dataFrom == 'MB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'MB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1000000;
 				} else if (dataTo == 'KB') {
@@ -429,7 +429,7 @@
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue / 1208925.81961463;
 				}
-            } else if (dataFrom == 'MiB' && document.getElementById('dataValue').value >= '0') {
+            } else if (dataFrom == 'MiB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1048576;
 				} else if (dataTo == 'KB') {
@@ -465,7 +465,7 @@
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue * 0.000000000000000000868;
 				}
-			} else if (dataFrom == 'GB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'GB' && document.getElementById('dataValue').value > '0') {
                 if (dataTo == 'B') {
                     document.getElementById('dataResult').value = dataValue * 1024;
                 } else if (dataTo == 'KB') {
@@ -501,7 +501,7 @@
                 } else if (dataTo == 'YiB') {
                     document.getElementById('dataResult').value = dataValue / 1180591620717411303424;
                 }
-			} else if (dataFrom == 'GiB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'GiB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1073741824;
 				} else if (dataTo == 'KB') {
@@ -537,7 +537,7 @@
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue * 0.000000000000847;
 				}
-			} else if (dataFrom == 'TB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'TB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1000000000000;
 				} else if (dataTo == 'KB') {
@@ -573,7 +573,7 @@
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue / 1208925.9;
 				}
-		    } else if (dataFrom == 'TiB' && document.getElementById('dataValue').value >= '0') {
+		    } else if (dataFrom == 'TiB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1099511627776;
 				} else if (dataTo == 'KB') {
@@ -610,7 +610,7 @@
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue * 0.000000000862;
 				}
-			} else if (dataFrom == 'PB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'PB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1000000000000000;
 				} else if (dataTo == 'KB') {
@@ -646,7 +646,7 @@
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue * 0.91;
 				}
-			} else if (dataFrom == 'PiB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'PiB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1125899906842624;
 				} else if (dataTo == 'KB') {
@@ -682,7 +682,7 @@
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue * 0.91;
 				}
-			} else if (dataFrom == 'EiB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'EiB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1152921504606846976;
 				} else if (dataTo == 'KB') {
@@ -718,7 +718,7 @@
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue * 0.905;
 				}
-			} else if (dataFrom == 'ZB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'ZB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1000000000000000000000;
 				} else if (dataTo == 'KB') {
@@ -754,7 +754,7 @@
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue * 0.000898;
 				}
-			} else if (dataFrom == 'YB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'YB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1000000000000000000000000;
 				} else if (dataTo == 'KB') {
@@ -789,7 +789,7 @@
 					document.getElementById('dataResult').value = dataValue;
 				} else if (dataTo == 'YiB') {
 					document.getElementById('dataResult').value = dataValue * 1.208;
-			} else if (dataFrom == 'YiB' && document.getElementById('dataValue').value >= '0') {
+			} else if (dataFrom == 'YiB' && document.getElementById('dataValue').value > '0') {
 				if (dataTo == 'B') {
 					document.getElementById('dataResult').value = dataValue * 1208925819614629174706176;
 				} else if (dataTo == 'KB') {
@@ -833,12 +833,12 @@
         var weightTo = document.getElementById('weightTo').value;
         var weightValue = document.getElementById('weightValue').value;
 
-        if (document.getElementById('weightValue').value < '0') {
+        if (document.getElementById('weightValue').value <= '0') {
             console.log('[debug] [weight] value too small, expected > 0');
             document.getElementById('weightResult').value = 'invalid';
             document.getElementById('btn_copy_weight').disabled = 'disabled';
         } else { document.getElementById('btn_copy_weight').removeAttribute('disabled'); }
-        if (weightFrom == 'ct' && document.getElementById('weightValue').value >= '0') {
+        if (weightFrom == 'ct' && document.getElementById('weightValue').value > '0') {
             if (weightTo == 'ct') {
                 document.getElementById('weightResult').value = weightValue;
             } else if (weightTo == 'mg') {
@@ -854,7 +854,7 @@
             } else if (weightTo == 'st') {
                 document.getElementById('weightResult').value = weightValue / 31750;
             }
-        } else if (weightFrom == 'mg' && document.getElementById('weightValue').value >= '0') {
+        } else if (weightFrom == 'mg' && document.getElementById('weightValue').value > '0') {
             if (weightTo == 'mg') {
                 document.getElementById('weightResult').value = weightValue;
             } else if (weightTo == 'ct') {
@@ -870,7 +870,7 @@
             } else if (weightTo == 'st') {
                 document.getElementById('weightResult').value = weightValue / 6350293.18;
             }
-        } else if (weightFrom == 'kg' && document.getElementById('weightValue').value >= '0') {
+        } else if (weightFrom == 'kg' && document.getElementById('weightValue').value > '0') {
             if (weightTo == 'ct') {
                 document.getElementById('weightResult').value = weightValue / 0.0002;
             } else if (weightTo == 'mg') {
@@ -886,7 +886,7 @@
             } else if (weightTo == 'st') {
                 document.getElementById('weightResult').value = weightValue / 0.157473;
             }
-        } else if (weightFrom == 't' && document.getElementById('weightValue').value >= '0') {
+        } else if (weightFrom == 't' && document.getElementById('weightValue').value > '0') {
             if (weightTo == 'ct') {
                 document.getElementById('weightResult').value = weightValue / 0.0000002;
             } else if (weightTo == 'mg') {
@@ -902,7 +902,7 @@
             } else if (weightTo == 'st') {
                 document.getElementById('weightResult').value = weightValue * 157.473;
             }
-        } else if (weightFrom == 'oz' && document.getElementById('weightValue').value >= '0') {
+        } else if (weightFrom == 'oz' && document.getElementById('weightValue').value > '0') {
             if (weightTo == 'ct') {
                 document.getElementById('weightResult').value = weightValue * 141.7;
             } else if (weightTo == 'mg') {
@@ -918,7 +918,7 @@
             } else if (weightTo == 'st') {
                 document.getElementById('weightResult').value = weightValue * 0.00446429;
             }
-        } else if (weightFrom == 'lb' && document.getElementById('weightValue').value >= '0') {
+        } else if (weightFrom == 'lb' && document.getElementById('weightValue').value > '0') {
             if (weightTo == 'ct') {
                 document.getElementById('weightResult').value = weightValue * 2268;
             } else if (weightTo == 'mg') {
@@ -934,7 +934,7 @@
             } else if (weightTo == 'st') {
                 document.getElementById('weightResult').value = weightValue * 0.0714286;
             }
-        } else if (weightFrom == 'st' && document.getElementById('weightValue').value >= '0') {
+        } else if (weightFrom == 'st' && document.getElementById('weightValue').value > '0') {
             if (weightTo == 'ct') {
                 document.getElementById('weightResult').value = weightValue * 31750;
             } else if (weightTo == 'mg') {
@@ -957,12 +957,12 @@
             var powerTo = document.getElementById('powerTo').value;
             var powerValue = document.getElementById('powerValue').value;
 
-            if (document.getElementById('powerValue').value < '0') {
+            if (document.getElementById('powerValue').value <= '0') {
                 console.log('[debug] [power] value too small, expected > 0');
                 document.getElementById('powerResult').value = 'invalid';
                 document.getElementById('btn_copy_power').disabled = 'disabled';
             } else { document.getElementById('btn_copy_power').removeAttribute('disabled'); }
-            if (powerFrom == 'W' && document.getElementById('powerValue').value >= '0') { // fucking loud tbh
+            if (powerFrom == 'W' && document.getElementById('powerValue').value > '0') { // fucking loud tbh
                 if (powerTo == 'W') {
                     document.getElementById('powerResult').value = powerValue;
                 } else if (powerTo == 'kW') {
@@ -970,7 +970,7 @@
                 } else if (powerTo == 'hp') { // bro why am i typing so fucking fast smh
                     document.getElementById('powerResult').value = powerValue / 745.7;
                 }
-            } else if (powerFrom == 'kW' && document.getElementById('powerValue').value >= '0') {
+            } else if (powerFrom == 'kW' && document.getElementById('powerValue').value > '0') {
                 if (powerTo == 'W') {
                     document.getElementById('powerResult').value = powerValue * 1000; // lam be like
                 } else if (dataTo == 'kW') {
@@ -978,7 +978,7 @@
                 } else if (dataTo == 'hp') {
                     document.getElementById('powerResult').value = powerValue / 0.7457; 
                 }
-            } else if (powerFrom == 'hp' && document.getElementById('powerValue').value >= '0') {
+            } else if (powerFrom == 'hp' && document.getElementById('powerValue').value > '0') {
                 if (powerTo == 'W') {
                     document.getElementById('powerResult').value = powerValue * 745.7;
                 } else if (powerTo == 'kW') {
@@ -993,12 +993,12 @@
             var energyTo = document.getElementById('energyTo').value;
             var energyValue = document.getElementById('energyValue').value;
 
-            if (document.getElementById('energyValue').value < '0') {
+            if (document.getElementById('energyValue').value <= '0') {
                 console.log('[debug] [energy] value too small, expected > 0');
                 document.getElementById('energyResult').value = 'invalid';
                 document.getElementById('btn_copy_energy').disabled = 'disabled';
             } else { document.getElementById('btn_copy_energy').removeAttribute('disabled'); }
-            if (energyFrom == 'J' && document.getElementById('energyValue').value >= '0') {
+            if (energyFrom == 'J' && document.getElementById('energyValue').value > '0') {
                 if (energyTo == 'J') {
                     document.getElementById('energyResult').value = energyValue; 
                 } else if (energyTo == 'kJ') {
@@ -1012,7 +1012,7 @@
                 } else if (energyTo == 'kWh') {
                     document.getElementById('energyResult').value = energyValue / 36000000;
                 }
-            } else if (energyFrom == 'kJ' && document.getElementById('energyValue').value >= '0') {
+            } else if (energyFrom == 'kJ' && document.getElementById('energyValue').value > '0') {
                 if (energyTo == 'J') {
                     document.getElementById('energyResult').value = energyValue * 1000;
                 } else if (energyTo == 'kcal') {
@@ -1024,7 +1024,7 @@
                 } else if (energyTo == 'kWh') {
                     document.getElementById('energyResult').value = energyValue / 3600;
                 }
-            } else if (energyFrom == 'kcal' && document.getElementById('energyValue').value >= '0') {
+            } else if (energyFrom == 'kcal' && document.getElementById('energyValue').value > '0') {
                 if (energyTo == 'kcal') {
                     document.getElementById('energyResult').value = energyValue;
                 } else if (energyTo == 'J') {
@@ -1038,7 +1038,7 @@
                 } else if (energyTo == 'kWh') {
                     document.getElementById('energyResult').value = energyValue * 0.0000011622;
                 }
-            } else if (energyFrom == 'gcal' && document.getElementById('energyValue').value >= '0') {
+            } else if (energyFrom == 'gcal' && document.getElementById('energyValue').value > '0') {
                 if (energyTo == 'gcal') {
                     document.getElementById('energyResult').value = energyValue;
                 } else if (energyTo == 'J') {
@@ -1052,7 +1052,7 @@
                 } else if (energyTo == 'kWh') {
                     document.getElementById('energyResult').value = energyValue * 3600000;
                 }
-            } else if (energyFrom == 'Wh' && document.getElementById('energyValue').value >= '0') {
+            } else if (energyFrom == 'Wh' && document.getElementById('energyValue').value > '0') {
                 if (energyTo == 'Wh') {
                     document.getElementById('energyResult').value = energyValue;
                 } else if (energyTo == 'J') {
@@ -1066,7 +1066,7 @@
                 } else if (energyTo == 'kWh') {
                     document.getElementById('energyResult').value = energyValue / 1000;
                 }
-            } else if (energyFrom == 'kWh' && document.getElementById('energyValue').value >= '0') {
+            } else if (energyFrom == 'kWh' && document.getElementById('energyValue').value > '0') {
                 if (energyTo == 'kWh') {
                     document.getElementById('energyResult').value = energyValue;
                 } else if (energyTo == 'J') {
@@ -1087,12 +1087,12 @@
             var timeTo = document.getElementById('timeTo').value;
             var timeValue = document.getElementById('timeValue').value;
 
-            if (document.getElementById('timeValue').value < '0') {
+            if (document.getElementById('timeValue').value <= '0') {
                 console.log('[debug] [time] value too small, expected > 0');
                 document.getElementById('timeResult').value = 'invalid';
                 document.getElementById('btn_copy_time').disabled = 'disabled';
             } else { document.getElementById('btn_copy_time').removeAttribute('disabled'); }
-            if (timeFrom == 'µs' && document.getElementById('timeValue').value >= '0') {
+            if (timeFrom == 'µs' && document.getElementById('timeValue').value > '0') {
 			    if (timeTo == 'µs') {
 				    document.getElementById('timeResult').value = timeValue;
 				} else if (timeTo == 'ms') {
@@ -1114,7 +1114,7 @@
 				} else if (timeTo == 'cen') {
 				    document.getElementById('timeResult').value = timeValue / 3153608640000000;
 				}
-			} else if (timeFrom == 'ms' && document.getElementById('timeValue').value >= '0') {
+			} else if (timeFrom == 'ms' && document.getElementById('timeValue').value > '0') {
 				if (timeTo == 'ms') {
 					document.getElementById('timeResult').value = timeValue;
 				} else if (timeTo == 'µs') {
@@ -1136,7 +1136,7 @@
 				} else if (timeTo == 'cen') {
 					document.getElementById('timeResult').value = timeValue / 3153600000000;
 				}
-			} else if (timeFrom == 's' && document.getElementById('timeValue').value >= '0') {
+			} else if (timeFrom == 's' && document.getElementById('timeValue').value > '0') {
 				if (timeTo == 's') {
 					document.getElementById('timeResult').value = timeValue;
 				} else if (timeTo == 'ms') {
@@ -1158,7 +1158,7 @@
 				} else if (timeTo == 'cen') {
 					document.getElementById('timeResult').value = timeValue / 3153600000;
 				}
-			} else if (timeFrom == 'mins' && document.getElementById('timeValue').value >= '0') {
+			} else if (timeFrom == 'mins' && document.getElementById('timeValue').value > '0') {
 				if (timeTo == 'mins') {
 					document.getElementById('timeResult').value = timeValue;
 				} else if (timeTo == 's') {
@@ -1180,7 +1180,7 @@
 				} else if (timeTo == 'cen') {
 					document.getElementById('timeResult').value = timeValue / 52560000;
 				}
-			} else if (timeFrom == 'hrs' && document.getElementById('timeValue').value >= '0') {
+			} else if (timeFrom == 'hrs' && document.getElementById('timeValue').value > '0') {
 				if (timeTo == 'hrs') {
 					document.getElementById('timeResult').value = timeValue;
 				} else if (timeTo == 'mins') {
@@ -1202,7 +1202,7 @@
 				} else if (timeTo == 'cen') {
 					document.getElementById('timeResult').value = timeValue / 876000;
 				}
-			} else if (timeFrom == 'days' && document.getElementById('timeValue').value >= '0') {
+			} else if (timeFrom == 'days' && document.getElementById('timeValue').value > '0') {
 				if (timeTo == 'days') {
 					document.getElementById('timeResult').value = timeValue;
 				} else if (timeTo == 'hrs') {
@@ -1224,7 +1224,7 @@
 				} else if (timeTo == 'cen') {
 					document.getElementById('timeResult').value = timeValue / 36500;
 				}
-			} else if (timeFrom == 'w' && document.getElementById('timeValue').value >= '0') {
+			} else if (timeFrom == 'w' && document.getElementById('timeValue').value > '0') {
 				if (timeTo == 'w') {
 					document.getElementById('timeResult').value = timeValue;
 				} else if (timeTo == 'days') {
@@ -1246,7 +1246,7 @@
 				} else if (timeTo == 'cen') {
 					document.getElementById('timeResult').value = timeValue / 5214.286;
 				}
-			} else if (timeFrom == 'y' && document.getElementById('timeValue').value >= '0') {
+			} else if (timeFrom == 'y' && document.getElementById('timeValue').value > '0') {
 				if (timeTo == 'y') {
 					document.getElementById('timeResult').value = timeValue;
 				} else if (timeTo == 'w') {
@@ -1268,7 +1268,7 @@
 				} else if (timeTo == 'cen') {
 					document.getElementById('timeResult').value = timeValue / 100;
 				}
-			 } else if (timeFrom == 'dec' && document.getElementById('timeValue').value >= '0') {
+			 } else if (timeFrom == 'dec' && document.getElementById('timeValue').value > '0') {
 				if (timeTo == 'dec') {
 					document.getElementById('timeResult').value = timeValue;
 				} else if (timeTo == 'y') {
@@ -1290,7 +1290,7 @@
 				} else if (timeTo == 'cen') {
 					document.getElementById('timeResult').value = timeValue / 10;
 				}
-			} else if (timeFrom == 'cen' && document.getElementById('timeValue').value >= '0') {
+			} else if (timeFrom == 'cen' && document.getElementById('timeValue').value > '0') {
                 if (timeTo == 'cen') {
                     document.getElementById('timeResult').value = timeValue
                 } else if (timeTo == 'dec') {
@@ -1336,7 +1336,7 @@
                 } else if (temperatureTo == 'f') {
                     document.getElementById('temperatureResult').value = (temperatureValue * 9/5) + 32;
                 } 
-            } else if (temperatureFrom == 'c') {
+            } else if (temperatureFrom == 'f') {
                 if (temperatureTo == 'k') {
                     document.getElementById('temperatureResult').value = (temperatureValue - 32) * 5/9 + 273.15;
                 } else if (temperatureTo == 'c') {
@@ -1351,12 +1351,12 @@
             var velocityTo = document.getElementById('velocityTo').value;
             var velocityValue = document.getElementById('velocityValue').value;
             
-            if (document.getElementById('velocityValue').value < '0') {
+            if (document.getElementById('velocityValue').value <= '0') {
                 console.log('[debug] [weigtimewightht] value too small, expected > 0');
                 document.getElementById('velocityResult').value = 'invalid';
                 document.getElementById('btn_copy_velocity').disabled = 'disabled';
             } else { document.getElementById('btn_copy_velocity').removeAttribute('disabled'); }
-            if (velocityFrom == 'kph' && document.getElementById('velocityValue').value >= '0') {
+            if (velocityFrom == 'kph' && document.getElementById('velocityValue').value > '0') {
                 if (velocityTo == 'kph') {
                     document.getElementById('velocityResult').value = velocityValue;
                 } else if (velocityTo == 'mps') {
@@ -1368,7 +1368,7 @@
                 } else if (velocityTo == 'kn') {
                     document.getElementById('velocityResult').value = velocityValue * 0.54;
                 } 
-            } else if (velocityFrom == 'mph' && document.getElementById('velocityValue').value >= '0') {
+            } else if (velocityFrom == 'mph' && document.getElementById('velocityValue').value > '0') {
                 if (velocityTo == 'mph') {
                     document.getElementById('velocityResult').value = velocityValue;
                 } else if (velocityTo == 'kph') {
@@ -1380,7 +1380,7 @@
                 } else if (velocityTo == 'kn') {
                     document.getElementById('velocityResult').value = velocityValue / 1.151;
                 }
-            } else if (velocityFrom == 'mpm' && document.getElementById('velocityValue').value >= '0') {
+            } else if (velocityFrom == 'mpm' && document.getElementById('velocityValue').value > '0') {
                 if (velocityTo == 'mpm') {
                     document.getElementById('velocityResult').value = velocityValue;
                 } else if (velocityTo == 'kph') {
@@ -1392,7 +1392,7 @@
                 } else if (velocityTo == 'kn') {
                     document.getElementById('velocityResult').value = velocityValue * 0.539957;
                 }
-            } else if (velocityFrom == 'miph' && document.getElementById('velocityValue').value >= '0') {
+            } else if (velocityFrom == 'miph' && document.getElementById('velocityValue').value > '0') {
                 if (velocityTo == 'miph') {
                     document.getElementById('velocityResult').value = velocityValue;
                 } else if (velocityTo == 'kph') {
@@ -1404,7 +1404,7 @@
                 } else if (velocityTo == 'kn') {
                     document.getElementById('velocityResult').value = velocityValue / 1.151;
                 }
-            } else if (velocityFrom == 'kn' && document.getElementById('velocityValue').value >= '0') {
+            } else if (velocityFrom == 'kn' && document.getElementById('velocityValue').value > '0') {
                 if (velocityTo == 'kn') {
                     document.getElementById('velocityResult').value = velocityValue;
                 } else if (velocityTo == 'kph') {
@@ -1449,7 +1449,7 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/main.css">
 	<link rel="icon" href="https://raw.githubusercontent.com/AnhNguyenlost13/projects/main/assets/favicon.ico">
 </head>
 <body>
