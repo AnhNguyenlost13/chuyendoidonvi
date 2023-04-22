@@ -1368,17 +1368,17 @@
                 } else if (velocityTo == 'kn') {
                     document.getElementById('velocityResult').value = velocityValue * 0.54;
                 } 
-            } else if (velocityFrom == 'mph' && document.getElementById('velocityValue').value > '0') {
-                if (velocityTo == 'mph') {
+            } else if (velocityFrom == 'mps' && document.getElementById('velocityValue').value > '0') {
+                if (velocityTo == 'mps') {
                     document.getElementById('velocityResult').value = velocityValue;
                 } else if (velocityTo == 'kph') {
-                    document.getElementById('velocityResult').value = velocityValue * 1.609;
-                } else if (velocityTo == 'mps') {
-                    document.getElementById('velocityResult').value = velocityValue / 2.237;
+                    document.getElementById('velocityResult').value = velocityValue * 3.6;
+                } else if (velocityTo == 'miph') {
+                    document.getElementById('velocityResult').value = velocityValue * 2.237;
                 } else if (velocityTo == 'mpm') {
-                    document.getElementById('velocityResult').value = velocityValue * 26.822;
+                    document.getElementById('velocityResult').value = velocityValue * 60;
                 } else if (velocityTo == 'kn') {
-                    document.getElementById('velocityResult').value = velocityValue / 1.151;
+                    document.getElementById('velocityResult').value = velocityValue * 1.944;
                 }
             } else if (velocityFrom == 'mpm' && document.getElementById('velocityValue').value > '0') {
                 if (velocityTo == 'mpm') {
