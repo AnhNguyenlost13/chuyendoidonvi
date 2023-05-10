@@ -11,11 +11,11 @@
 - [x] Dữ liệu
 - [x] Điện
 - [x] Thời gian
-- [ ] Nhiệt độ
-- [ ] Vận tốc
-- [ ] Năng lượng
+- [x] Nhiệt độ
+- [x] Vận tốc
+- [x] Năng lượng
 
 ## các chức năng khác
-- [ ] tính cạnh huyền/cạnh góc vuông của một tam giác vuông
-- [ ] tính sin cos tan cot
-- [ ] tạo ra số chữ số PI theo yêu cầu
+- [x] tính cạnh huyền/cạnh góc vuông của một tam giác vuông
+- [x] tính sin cos tan cot
+- [x] tạo ra số chữ số PI theo yêu cầu
